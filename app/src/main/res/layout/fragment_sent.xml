@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="@string/enviado"
+            android:textColor="@color/colorPrimary"
+            android:textSize="27sp" />
+
+        <ImageButton
+            android:contentDescription="@string/exit"
+            android:id="@+id/button_closeSent"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="-35dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_exit_button"
+            android:src="@drawable/close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:contentDescription="@string/sent"
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/check_circle" />
+
+        <Button
+            android:contentDescription="@string/titulo_reporte"
+            android:id="@+id/imageButtonReporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detalles"
+            android:background="@drawable/background_add_location"
+            android:layout_marginBottom="70dp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

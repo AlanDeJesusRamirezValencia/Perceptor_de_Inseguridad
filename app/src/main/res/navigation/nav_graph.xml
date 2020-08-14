@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/choiserFragment">
+
+    <fragment
+        android:id="@+id/choiserFragment"
+        android:name="com.example.perceptordeinseguridad.ChoicerFragment"
+        android:label="fragment_choiser"
+        tools:layout="@layout/fragment_choiser" >
+        <action
+            android:id="@+id/choiserFrag_to_logInFrag"
+            app:destination="@id/logInFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/choiserFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/choiserFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.perceptordeinseguridad.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/logInFrag_to_singUpFrag"
+            app:destination="@id/singUpFragment" />
+        <action
+            android:id="@+id/logInFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="com.example.perceptordeinseguridad.SingUpOneFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up_one" >
+        <action
+            android:id="@+id/singUpFrag_to_singUpTwoFrag"
+            app:destination="@id/singUpTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startLocationFragment"
+        android:name="com.example.perceptordeinseguridad.StartLocationFragment"
+        android:label="fragment_start_location"
+        tools:layout="@layout/fragment_start_location" >
+        <action
+            android:id="@+id/startLocFrag_to_ActiveGPS"
+            app:destination="@id/askToActiveGPSDialog" />
+        <action
+            android:id="@+id/startLocFrag_to_levelFrag"
+            app:destination="@id/levelFragment" />
+        <action
+            android:id="@+id/startLocFrag_to_userFrag"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelFragment"
+        android:name="com.example.perceptordeinseguridad.LevelFragment"
+        android:label="fragment_level"
+        tools:layout="@layout/fragment_level" >
+        <argument
+            android:name="lat"
+            app:argType="string" />
+        <argument
+            android:name="lon"
+            app:argType="string" />
+        <action
+            android:id="@+id/levelFrag_to_contextFrag"
+            app:destination="@id/contextFragment" />
+        <action
+            android:id="@+id/levelFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/levelFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/askToActiveGPSDialog"
+        android:name="com.example.perceptordeinseguridad.AskToActiveGPSDialog"
+        android:label="dialog_ask_to_active_gps"
+        tools:layout="@layout/dialog_ask_to_active_gps" />
+    <fragment
+        android:id="@+id/contextFragment"
+        android:name="com.example.perceptordeinseguridad.ContextFragment"
+        android:label="fragment_context"
+        tools:layout="@layout/fragment_context" >
+        <argument
+            android:name="lat2"
+            app:argType="string" />
+        <argument
+            android:name="lon2"
+            app:argType="string" />
+        <argument
+            android:name="level"
+            app:argType="string" />
+        <action
+            android:id="@+id/contextFrag_to_typeFrag"
+            app:destination="@id/typeFragment" />
+        <action
+            android:id="@+id/contextFrag_to_startLocationFrag"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/contextFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="com.example.perceptordeinseguridad.TypeFragment"
+        android:label="fragment_type"
+        tools:layout="@layout/fragment_type" >
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+        <argument
+            android:name="level2"
+            app:argType="string" />
+        <argument
+            android:name="context"
+            app:argType="string" />
+        <action
+            android:id="@+id/typeFrag_to_sendingFrag"
+            app:destination="@id/sendingFragment" />
+        <action
+            android:id="@+id/typeFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/typeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendingFragment"
+        android:name="com.example.perceptordeinseguridad.SendingFragment"
+        android:label="fragment_sending"
+        tools:layout="@layout/fragment_sending" >
+        <argument
+            android:name="latitude2"
+            app:argType="string" />
+        <argument
+            android:name="longitude2"
+            app:argType="string" />
+        <argument
+            android:name="level3"
+            app:argType="string" />
+        <argument
+            android:name="context2"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/sendingFrag_to_sentFrag"
+            app:destination="@id/sentFragment"
+            app:popUpTo="@id/startLocationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sentFragment"
+        android:name="com.example.perceptordeinseguridad.SentFragment"
+        android:label="fragment_sent"
+        tools:layout="@layout/fragment_sent" >
+        <argument
+            android:name="idPerception"
+            app:argType="string" />
+        <action
+            android:id="@+id/sentFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/sentFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/sentFrag_to_reportDialog"
+            app:destination="@id/reportDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpTwoFragment"
+        android:name="com.example.perceptordeinseguridad.SingUpTwoFragment"
+        android:label="fragment_sing_up_two"
+        tools:layout="@layout/fragment_sing_up_two" >
+        <argument
+            android:name="usuario"
+            app:argType="string" />
+        <argument
+            android:name="contrasena"
+            app:argType="string" />
+        <action
+            android:id="@+id/singUpTwoFrag_to_singUpThreeFrag"
+            app:destination="@id/singUpThreeFragment" />
+        <argument
+            android:name="correo"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpThreeFragment"
+        android:name="com.example.perceptordeinseguridad.SingUpThreeFragment"
+        android:label="fragment_sing_up_three"
+        tools:layout="@layout/fragment_sing_up_three" >
+        <argument
+            android:name="user"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument
+            android:name="genero"
+            app:argType="string" />
+        <argument
+            android:name="fecha"
+            app:argType="string" />
+        <action
+            android:id="@+id/singUpThreeFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment"
+            app:popUpTo="@id/singUpThreeFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="mail"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/reportDialog"
+        android:name="com.example.perceptordeinseguridad.ReportDialog"
+        android:label="dialog_report"
+        tools:layout="@layout/dialog_report" >
+        <argument
+            android:name="perception_id"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.perceptordeinseguridad.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/userFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment" />
+        <action
+            android:id="@+id/userFrag_to_choiserFrag"
+            app:destination="@id/choiserFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/hystoryFragment"
+        android:name="com.example.perceptordeinseguridad.HystoryFragment"
+        android:label="fragment_hystory"
+        tools:layout="@layout/fragment_hystory" />
+</navigation>

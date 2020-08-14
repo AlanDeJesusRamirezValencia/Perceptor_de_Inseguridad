@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:orientation="vertical"
+    tools:context=".StartLocationFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fontFamily="@font/roboto_black"
+            android:text="@string/titulo_actitityMain"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_StartLocation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/background_add_location"
+            android:contentDescription="@string/start_location"
+            android:elevation="8dp"
+            android:src="@drawable/add_location" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/añadir_percepcion"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/container2"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <View
+                android:layout_width="105dp"
+                android:layout_height="45dp"
+                android:background="@drawable/container3"
+                android:layout_marginTop="28dp"/>
+            <View
+                android:layout_width="57.5dp"
+                android:layout_height="57.5dp"
+                android:background="@drawable/background_add_location"
+                android:layout_marginTop="-67.5dp"
+                android:elevation="4dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="-70dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_goToUserFromStartLoc"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/go_to_user"
+                android:src="@drawable/account_circle" />
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_outline_settings_24"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/go_to_settings"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/nav_add_location"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="-20dp"
+                android:contentDescription="@string/go_to_start_location"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/history"
+                android:background="#00FFFFFF"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/go_to_history"/>
+            <View
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/notify"
+                android:layout_marginStart="-45dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="-7.5dp"
+                android:contentDescription="@string/intern_notification"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/nav_map"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/go_to_map"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

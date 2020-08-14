@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SingUpOneFragment"
+    android:orientation="vertical"
+    android:background="@color/activityBackground"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black"
+            android:text="@string/sing_up_title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/correoElectronico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="password"
+            android:hint="@string/correo"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorSecondaryLight"
+            android:textColor="@color/colorSecondaryDark"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <EditText
+            android:id="@+id/editTextUsuarioRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="username"
+            android:hint="@string/NickName"
+            android:inputType="textNoSuggestions"
+            android:textColorHint="@color/colorSecondaryLight"
+            android:textColor="@color/colorSecondaryDark"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <EditText
+            android:id="@+id/editTextContrasenaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="password"
+            android:hint="@string/Contraseña"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorSecondaryLight"
+            android:textColor="@color/colorSecondaryDark"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <EditText
+            android:id="@+id/confirmarContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="password"
+            android:hint="@string/confirmarContraseña"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorSecondaryLight"
+            android:textColor="@color/colorSecondaryDark"
+            android:fontFamily="@font/roboto_medium"/>
+
+
+        <Button
+            android:id="@+id/button_continuar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/red_button"
+            android:fontFamily="@font/roboto_black"
+            android:text="@string/continuar"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

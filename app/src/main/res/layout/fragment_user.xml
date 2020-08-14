@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:orientation="vertical"
+    tools:context=".UserFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/user_username"
+            android:text="@string/NickName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/background_add_location"
+            android:src="@drawable/account_circle"
+            android:contentDescription="@string/user_image"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/container4"
+            android:contentDescription="@string/take_a_photo"
+            android:src="@drawable/camera" />
+
+        <TextView
+            android:id="@+id/user_id_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id_usuario" />
+
+        <TextView
+            android:id="@+id/user_fecha_nacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FechaNacimiento" />
+
+        <TextView
+            android:id="@+id/user_edad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edad" />
+
+        <TextView
+            android:id="@+id/user_genero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genero" />
+
+        <TextView
+            android:id="@+id/user_nacionalidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nacionalidad" />
+
+        <TextView
+            android:id="@+id/user_nivel_socioeconomico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nivel_socioeconomico" />
+
+        <TextView
+            android:id="@+id/user_ocupacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ocupacion" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:background="@drawable/container1"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/colorSecondaryDark"
+            android:fontFamily="@font/roboto_black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/container2"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <View
+                android:layout_width="105dp"
+                android:layout_height="45dp"
+                android:background="@drawable/container3"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="140dp"/>
+            <View
+                android:layout_width="57.5dp"
+                android:layout_height="57.5dp"
+                android:background="@drawable/background_add_location"
+                android:layout_marginTop="-67.5dp"
+                android:layout_marginEnd="140dp"
+                android:elevation="4dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="-70dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/account_circle"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="-20dp"
+                android:layout_marginEnd="30dp"
+                android:contentDescription="@string/go_to_user"
+                />
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_outline_settings_24"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/go_to_settings"/>
+            <ImageButton
+                android:id="@+id/btn_goToStartLocFragFromUserFrag"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/nav_add_location"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/go_to_start_location"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/history"
+                android:background="#00FFFFFF"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/go_to_history"/>
+            <View
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/notify"
+                android:layout_marginStart="-45dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="-7.5dp"
+                android:contentDescription="@string/intern_notification"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/nav_map"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/go_to_map"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

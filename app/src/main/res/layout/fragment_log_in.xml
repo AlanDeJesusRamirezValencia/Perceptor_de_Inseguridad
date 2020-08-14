@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    tools:context=".LogInFragment">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/logo"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="@string/bienvenida"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/editTextUsuarioLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:autofillHints="username"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/NickName"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/colorSecondaryDark"
+            android:textColorHint="@color/colorSecondaryLight" />
+
+        <EditText
+            android:id="@+id/editTextContrasenalogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="username"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/colorSecondaryDark"
+            android:textColorHint="@color/colorSecondaryLight" />
+
+        <Button
+            android:id="@+id/buttonIniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/red_button"
+            android:fontFamily="@font/roboto_black"
+            android:text="@string/IniciarSesion"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonIrARegistrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="10dp"
+            android:text="@string/Registrarse"
+            android:textColor="@color/colorSecondaryDark"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp
+"/>
+
+</LinearLayout>
