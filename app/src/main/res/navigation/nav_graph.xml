@@ -53,10 +53,21 @@
             app:destination="@id/askToActiveGPSDialog" />
         <action
             android:id="@+id/startLocFrag_to_levelFrag"
-            app:destination="@id/levelFragment" />
+            app:destination="@id/levelFragment"
+            app:enterAnim="@anim/enter_anim_slide"
+            app:exitAnim="@anim/exit_anim_fade_out" />
         <action
             android:id="@+id/startLocFrag_to_userFrag"
             app:destination="@id/userFragment" />
+        <argument
+            android:name="startLoc_initialAnim"
+            app:argType="string" />
+        <action
+            android:id="@+id/startLocFrag_to_mapFrag"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_startLocationFragment_to_hystoryFragment"
+            app:destination="@id/hystoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/levelFragment"
@@ -71,7 +82,9 @@
             app:argType="string" />
         <action
             android:id="@+id/levelFrag_to_contextFrag"
-            app:destination="@id/contextFragment" />
+            app:destination="@id/contextFragment"
+            app:enterAnim="@anim/enter_anim_slide"
+            app:exitAnim="@anim/exit_anim_slide" />
         <action
             android:id="@+id/levelFrag_to_startLocFrag"
             app:destination="@id/startLocationFragment"
@@ -99,7 +112,9 @@
             app:argType="string" />
         <action
             android:id="@+id/contextFrag_to_typeFrag"
-            app:destination="@id/typeFragment" />
+            app:destination="@id/typeFragment"
+            app:enterAnim="@anim/enter_anim_slide"
+            app:exitAnim="@anim/exit_anim_slide" />
         <action
             android:id="@+id/contextFrag_to_startLocationFrag"
             app:destination="@id/startLocationFragment"
@@ -125,7 +140,9 @@
             app:argType="string" />
         <action
             android:id="@+id/typeFrag_to_sendingFrag"
-            app:destination="@id/sendingFragment" />
+            app:destination="@id/sendingFragment"
+            app:enterAnim="@anim/enter_anim_fade_in"
+            app:exitAnim="@anim/exit_anim_fade_out" />
         <action
             android:id="@+id/typeFrag_to_startLocFrag"
             app:destination="@id/startLocationFragment"
@@ -155,6 +172,8 @@
         <action
             android:id="@+id/sendingFrag_to_sentFrag"
             app:destination="@id/sentFragment"
+            app:enterAnim="@anim/enter_anim_fade_in"
+            app:exitAnim="@anim/exit_anim_fade_out"
             app:popUpTo="@id/startLocationFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -235,15 +254,41 @@
         tools:layout="@layout/fragment_user" >
         <action
             android:id="@+id/userFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment" />
+            app:destination="@id/startLocationFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/userFrag_to_choiserFrag"
             app:destination="@id/choiserFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/userFrag_to_mapFrag"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_hystoryFragment"
+            app:destination="@id/hystoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/hystoryFragment"
         android:name="com.example.perceptordeinseguridad.HystoryFragment"
         android:label="fragment_hystory"
-        tools:layout="@layout/fragment_hystory" />
+        tools:layout="@layout/fragment_hystory" >
+        <action
+            android:id="@+id/hystoryFrag_to_mapFrag"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_hystoryFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.perceptordeinseguridad.mapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/mapFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment" />
+        <action
+            android:id="@+id/mapFrag_to_userFrag"
+            app:destination="@id/userFragment" />
+    </fragment>
 </navigation>

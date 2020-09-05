@@ -70,16 +70,29 @@
 
     <!--Tipo de peligro-->
     <string name="type_of_danger">Tipo de Peligro</string>
-    <string name="humanDanger">Peligro\nHumano</string>
-    <string name="localDanger">Peligro\nLocal</string>
-    <string name="asault">Asalto</string>
-    <string name="vandalismo">Vandalismo</string>
+    <string name="sospechoso">sospechoso</string>
+    <string name="leve">Leve</string>
+    <string name="menos_grave">Menos grave</string>
+    <string name="grave">Grave</string>
+    <string name="muy_grave">Muy grave</string>
+
+    <string name="personas_armadas">personas portando armas</string>
+    <string name="drogas">Venta/consumo de drogadas</string>
+    <string name="venta_de_drogas_alcohol">Personas en estado de ebriedad</string>
     <string name="acoso">Acoso</string>
-    <string name="personasAD">Personas alcoholizadas/drogadas</string>
-    <string name="violenciaNoIntencional">Violencia no intencional</string>
-    <string name="peligroPeatonal">Peligro peatonal</string>
-    <string name="peligroSanitario">Peligro sanitario</string>
-    <string name="altaContaminacion">Alta contaminación</string>
+    
+    <string name="robo">Robo</string>
+    <string name="vandalismo">Vandalismo</string>
+    
+    <string name="asault">Asalto</string>
+    <string name="allanamiento">Allanamiento de morada</string>
+    
+    <string name="secuestro">Secuestro</string>
+    <string name="abuso_sexual">Abuso sexual</string>
+    <string name="agresion_agravada">Agresión agravada (Lesiones)</string>
+
+    <string name="homicidio">Homicidio</string>
+    <string name="terrorismo">Terrorismo</string>
 
     <string name="skip">Omitir</string>
 
@@ -103,7 +116,6 @@
     <string name="valor_vacio">--</string>
     <string name="mis_percepciones">Mis percepciones:</string>
     <string name="omitir_y_registrar">Omitir y Registrar</string>
-    <string name="historial">Historial</string>
     <string name="detalles">Detalles</string>
     <string name="correo">Correo Electrónico</string>
     <string name="pendientes">Percepciones pendientes</string>
@@ -112,6 +124,9 @@
 
     <string name="user_image">Imagen de usuario</string>
     <string name="take_a_photo">Tomar fotografía</string>
+
+    <string name="map">Mapa</string>
+    <string name="history">Historial</string>
 
     <!--Navigation bar-->
     <string name="go_to_user">Ir a usuario</string>

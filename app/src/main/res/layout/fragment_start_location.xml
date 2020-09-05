@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -77,16 +78,19 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
             <View
+                android:id="@+id/start_loc_focus"
                 android:layout_width="105dp"
                 android:layout_height="45dp"
                 android:background="@drawable/container3"
                 android:layout_marginTop="28dp"/>
+
             <View
+                android:id="@+id/start_loc_float_view"
                 android:layout_width="57.5dp"
                 android:layout_height="57.5dp"
-                android:background="@drawable/background_add_location"
                 android:layout_marginTop="-67.5dp"
-                android:elevation="4dp"/>
+                android:background="@drawable/background_add_location"
+                android:elevation="4dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -98,48 +102,50 @@
 
             <ImageButton
                 android:id="@+id/btn_goToUserFromStartLoc"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="20dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/go_to_user"
                 android:src="@drawable/account_circle" />
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
                 android:src="@drawable/ic_outline_settings_24"
                 android:background="#00FFFFFF"
                 android:layout_marginTop="5dp"
                 android:contentDescription="@string/go_to_settings"/>
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="30dp"
+                android:id="@+id/start_loc_float_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
                 android:src="@drawable/nav_add_location"
                 android:background="#00FFFFFF"
                 android:layout_marginTop="-20dp"
                 android:contentDescription="@string/go_to_start_location"/>
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/history"
                 android:background="#00FFFFFF"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="0dp"
                 android:layout_marginTop="5dp"
                 android:contentDescription="@string/go_to_history"/>
             <View
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:background="@drawable/notify"
-                android:layout_marginStart="-45dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginEnd="25dp"
                 android:layout_marginTop="-7.5dp"
                 android:contentDescription="@string/intern_notification"/>
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/btn_goToMapFromStartLoc"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/nav_map"
                 android:background="#00FFFFFF"
                 android:layout_marginTop="5dp"

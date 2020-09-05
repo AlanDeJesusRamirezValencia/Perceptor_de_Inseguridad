@@ -56,7 +56,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
             android:text="@string/public_transport"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 
         <Button
@@ -67,7 +67,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
             android:text="@string/private_transport"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 
         <Button
@@ -79,7 +79,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
             android:text="@string/onFoot"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 
         <Button
@@ -91,7 +91,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
             android:text="@string/atLocalWork"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 
         <Button
@@ -103,7 +103,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
             android:text="@string/atHouse"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 
         <Button

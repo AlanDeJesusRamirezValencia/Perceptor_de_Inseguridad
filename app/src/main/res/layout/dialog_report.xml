@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/latitud"
-                android:textColor="@color/colorSecondaryLight"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/longitud"
-                android:textColor="@color/colorSecondaryLight"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
@@ -83,7 +83,7 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/roboto_black"
                 android:text="@string/valor_vacio"
-                android:textColor="@android:color/white"
+                android:textColor="@color/activityBackground"
                 android:textSize="25sp" />
 
             <TextView
@@ -92,7 +92,7 @@
                 android:elevation="5dp"
                 android:fontFamily="@font/roboto_black"
                 android:text="@string/nivel"
-                android:textColor="@android:color/white"
+                android:textColor="@color/activityBackground"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/x"
-                android:textColor="@color/colorSecondaryLight"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
@@ -144,14 +144,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="@string/y"
-                android:textColor="@color/colorSecondaryLight"
+                android:text="@string/zona"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/tv_y"
+                android:id="@+id/tv_zona"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:text="@string/valor_vacio"
                 android:textColor="@color/colorSecondaryDark"
                 android:textSize="20sp" />
@@ -167,25 +168,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="@string/zona"
-                android:textColor="@color/colorSecondaryLight"
+                android:text="@string/y"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/tv_zona"
+                android:id="@+id/tv_y"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
                 android:text="@string/valor_vacio"
                 android:textColor="@color/colorSecondaryDark"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/hemisferio"
-                android:textColor="@color/colorSecondaryLight"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
@@ -194,7 +195,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/valor_vacio"
                 android:textColor="@color/colorSecondaryDark"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"/>
 
         </LinearLayout>
 
@@ -223,7 +225,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/context"
-                android:textColor="@color/colorSecondaryLight"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
@@ -247,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/type_of_danger"
-                android:textColor="@color/colorSecondaryLight"
+                android:textColor="@color/colorSecondaryDark"
                 android:textSize="12sp" />
 
             <TextView
@@ -270,7 +272,7 @@
         android:background="@drawable/red_button"
         android:fontFamily="@font/roboto_black"
         android:text="@string/aceptar"
-        android:textColor="@android:color/white" />
+        android:textColor="@color/colorSecondary" />
 
 
 </LinearLayout>

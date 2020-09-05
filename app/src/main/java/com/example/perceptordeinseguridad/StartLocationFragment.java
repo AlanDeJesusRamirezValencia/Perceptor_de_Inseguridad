@@ -18,6 +18,8 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -37,6 +39,7 @@ public class StartLocationFragment extends Fragment {
 
     private final int granted = PackageManager.PERMISSION_GRANTED;
     private ImageButton goToUser;
+    private ImageButton goToMap;
     private View view;
     private FusedLocationProviderClient provider;
     private LocationRequest request;
@@ -59,15 +62,28 @@ public class StartLocationFragment extends Fragment {
         }
     };
 
+    //Animated components
+    private View focus;
+    private View floatView;
+    private ImageButton floatImage;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View v = inflater.inflate(R.layout.fragment_start_location, container, false);
         goToUser = v.findViewById(R.id.btn_goToUserFromStartLoc);
+        goToMap = v.findViewById(R.id.btn_goToMapFromStartLoc);
+        floatView = v.findViewById(R.id.start_loc_float_view);
+        focus = v.findViewById(R.id.start_loc_focus);
+        floatImage = v.findViewById(R.id.start_loc_float_image);
+        floatImage.setVisibility(View.INVISIBLE);
         provider = LocationServices.getFusedLocationProviderClient(requireActivity());
         request = LocationRequest.create();
         request.setInterval(4000);
         request.setFastestInterval(2000);
         request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+        //Animations
+        floatButtonAnimation();
         this.view = v;
         return v;
     }
@@ -78,6 +94,8 @@ public class StartLocationFragment extends Fragment {
         ImageButton start = view.findViewById(R.id.btn_StartLocation);
         goToUser.setOnClickListener(
                 v -> Navigation.findNavController(view).navigate(R.id.startLocFrag_to_userFrag));
+        goToMap.setOnClickListener(view1 ->
+                Navigation.findNavController(view).navigate(R.id.startLocFrag_to_mapFrag));
         start.setOnClickListener(v -> checkPermissionsAndGetLastLocation());
     }
 
@@ -106,5 +124,18 @@ public class StartLocationFragment extends Fragment {
     public void onStop() {
         super.onStop();
         provider.removeLocationUpdates(callback);
+    }
+
+    private void floatButtonAnimation(){
+        Animation animFloatButton;
+        animFloatButton = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_view);
+        Animation animFloatImage;
+        animFloatImage = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_image);
+        Animation focusAnimation;
+        focusAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.focus_initial);
+        floatView.startAnimation(animFloatButton);
+        floatImage.startAnimation(animFloatImage);
+        floatImage.setVisibility(View.VISIBLE);
+        focus.startAnimation(focusAnimation);
     }
 }

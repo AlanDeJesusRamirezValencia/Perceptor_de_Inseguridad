@@ -76,7 +76,7 @@ public class LogInFragment extends Fragment {
      * Used to instantiate the local fields.
      */
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.fragment_log_in, container, false);
         username = view.findViewById(R.id.editTextUsuarioLogIn);
         password = view.findViewById(R.id.editTextContrasenalogin);
@@ -121,7 +121,6 @@ public class LogInFragment extends Fragment {
     /** Successful connection and request submission. */
     private void response(@NonNull JSONObject response){
         try {
-            Toast.makeText(requireActivity(), response.toString(), Toast.LENGTH_SHORT).show();
             JSONArray arreglo = response.getJSONArray("datos");
             userData = arreglo.getJSONObject(0);
             if(userData.getString("id_usuario").equals("")) {
@@ -130,7 +129,6 @@ public class LogInFragment extends Fragment {
             }
             else{
                 storeUserData();
-                Toast.makeText(requireActivity(), userData.toString(), duration).show();
                 Navigation.findNavController(view).navigate(R.id.logInFrag_to_startLocFrag);
             }
         } catch (JSONException e) {

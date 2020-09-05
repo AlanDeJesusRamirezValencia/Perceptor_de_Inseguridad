@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SentFragment">
+    tools:context=".SentFragment"
+    android:background="@color/activityBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,14 +51,14 @@
             android:src="@drawable/check_circle" />
 
         <Button
-            android:contentDescription="@string/titulo_reporte"
             android:id="@+id/imageButtonReporte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/detalles"
-            android:background="@drawable/background_add_location"
             android:layout_marginBottom="70dp"
-            android:textColor="@android:color/white"/>
+            android:background="@drawable/background_add_location"
+            android:contentDescription="@string/titulo_reporte"
+            android:text="@string/detalles"
+            android:textColor="@color/colorSecondary" />
 
     </LinearLayout>
 

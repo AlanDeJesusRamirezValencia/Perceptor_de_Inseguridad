@@ -52,7 +52,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
             android:text="@string/uno"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
         <Button
@@ -63,7 +63,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
             android:text="@string/dos"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
         <Button
@@ -75,7 +75,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
             android:text="@string/tres"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
         <Button
@@ -87,7 +87,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
             android:text="@string/cuatro"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
         <Button
@@ -99,7 +99,7 @@
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
             android:text="@string/cinco"
-            android:textColor="@android:color/white"
+            android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
     </LinearLayout>

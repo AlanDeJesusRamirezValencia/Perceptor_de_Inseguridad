@@ -12,6 +12,8 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -30,12 +32,20 @@ public class UserFragment extends Fragment {
     private TextView socioeconomicLevel;
     private TextView occupation;
     private ImageButton goToStartLocation;
+    private ImageButton goToMap;
     private Button logOut;
 
+    //Navigation bar animation components
+
+    private View focus;
+    private View floatView;
+    private ImageButton floatImage;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.fragment_user, container, false);
         goToStartLocation = view.findViewById(R.id.btn_goToStartLocFragFromUserFrag);
+        goToMap = view.findViewById(R.id.btn_goToMapFromUser);
         logOut = view.findViewById(R.id.btn_logout);
         user = requireActivity().getSharedPreferences("current_user", Context.MODE_PRIVATE);
         userID = view.findViewById(R.id.user_id_user);
@@ -46,6 +56,12 @@ public class UserFragment extends Fragment {
         nationality = view.findViewById(R.id.user_nacionalidad);
         socioeconomicLevel = view.findViewById(R.id.user_nivel_socioeconomico);
         occupation = view.findViewById(R.id.user_ocupacion);
+        focus = view.findViewById(R.id.user_focus);
+        floatView = view.findViewById(R.id.user_float_button);
+        floatImage = view.findViewById(R.id.user_float_image);
+
+        //Animations
+        floatButtonAnimation();
         return view;
     }
 
@@ -55,6 +71,8 @@ public class UserFragment extends Fragment {
         showDataOnScreen();
         goToStartLocation.setOnClickListener(
                 v -> Navigation.findNavController(view).navigate(R.id.userFrag_to_startLocFrag));
+        goToMap.setOnClickListener(
+                view1 -> Navigation.findNavController(view).navigate(R.id.userFrag_to_mapFrag));
         logOut.setOnClickListener(this::logOut);
     }
 
@@ -73,5 +91,19 @@ public class UserFragment extends Fragment {
         nationality.setText(user.getString("nationality",""));
         socioeconomicLevel.setText(user.getString("se_level",""));
         occupation.setText(user.getString("occupation", ""));
+    }
+
+
+    private void floatButtonAnimation(){
+        Animation animFloatButton;
+        animFloatButton = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_view);
+        Animation animFloatImage;
+        animFloatImage = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_image);
+        Animation focusAnimation;
+        focusAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.focus_initial);
+        floatView.startAnimation(animFloatButton);
+        floatImage.startAnimation(animFloatImage);
+        floatImage.setVisibility(View.VISIBLE);
+        focus.startAnimation(focusAnimation);
     }
 }

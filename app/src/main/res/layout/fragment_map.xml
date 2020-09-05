@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/activityBackground"
-    android:orientation="vertical"
-    tools:context=".UserFragment">
+    tools:context=".mapFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/user_username"
-            android:text="@string/NickName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:fontFamily="@font/roboto_black"
+            android:text="@string/map"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp" />
 
@@ -34,11 +31,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center_horizontal"
+        android:layout_height="match_parent"
+        android:layout_marginTop="85dp"
+        android:gravity="center"
         android:orientation="vertical"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,75 +41,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/background_add_location"
-            android:src="@drawable/account_circle"
-            android:contentDescription="@string/user_image"/>
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="-40dp"
-            android:background="@drawable/container4"
-            android:contentDescription="@string/take_a_photo"
-            android:src="@drawable/camera" />
-
-        <TextView
-            android:id="@+id/user_id_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/id_usuario" />
-
-        <TextView
-            android:id="@+id/user_fecha_nacimiento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/FechaNacimiento" />
-
-        <TextView
-            android:id="@+id/user_edad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edad" />
-
-        <TextView
-            android:id="@+id/user_genero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/genero" />
-
-        <TextView
-            android:id="@+id/user_nacionalidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nacionalidad" />
-
-        <TextView
-            android:id="@+id/user_nivel_socioeconomico"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nivel_socioeconomico" />
-
-        <TextView
-            android:id="@+id/user_ocupacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ocupacion" />
-
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/logout"
-            android:background="@drawable/container1"
-            android:paddingEnd="10dp"
-            android:paddingStart="10dp"
-            android:textColor="@color/colorSecondary"
-            android:fontFamily="@font/roboto_black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -134,21 +65,14 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical">
+
             <View
-                android:id="@+id/user_focus"
-                android:layout_width="105dp"
-                android:layout_height="45dp"
-                android:background="@drawable/container3"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="140dp"/>
-            <View
-                android:id="@+id/user_float_button"
+                android:id="@+id/map_float_view"
                 android:layout_width="57.5dp"
                 android:layout_height="57.5dp"
-                android:background="@drawable/background_add_location"
-                android:layout_marginTop="-67.5dp"
-                android:layout_marginEnd="140dp"
-                android:elevation="4dp"/>
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="140dp"
+                android:background="@drawable/background_add_location" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -157,16 +81,16 @@
             android:layout_marginTop="-70dp"
             android:orientation="horizontal"
             android:gravity="center">
+
             <ImageButton
-                android:id="@+id/user_float_image"
+                android:id="@+id/btn_goToUserFromMapFrag"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/account_circle"
-                android:background="#00FFFFFF"
-                android:layout_marginTop="-20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp"
+                android:background="#00FFFFFF"
                 android:contentDescription="@string/go_to_user"
-                />
+                android:src="@drawable/account_circle" />
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -176,7 +100,7 @@
                 android:layout_marginTop="5dp"
                 android:contentDescription="@string/go_to_settings"/>
             <ImageButton
-                android:id="@+id/btn_goToStartLocFragFromUserFrag"
+                android:id="@+id/btn_goToStartLocFragFromMapFrag"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"
@@ -201,15 +125,16 @@
                 android:layout_marginTop="-7.5dp"
                 android:contentDescription="@string/intern_notification"/>
             <ImageButton
-                android:id="@+id/btn_goToMapFromUser"
+                android:id="@+id/map_float_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/nav_map"
                 android:background="#00FFFFFF"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="-20dp"
                 android:contentDescription="@string/go_to_map"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
