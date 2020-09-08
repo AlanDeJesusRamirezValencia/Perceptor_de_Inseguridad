@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/nivel_percepcion"
+            android:text="@string/level_of_perception"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp" />
 
@@ -51,7 +51,7 @@
             android:layout_marginBottom="-80dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/uno"
+            android:text="@string/one"
             android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
@@ -62,7 +62,7 @@
             android:layout_marginBottom="-80dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/dos"
+            android:text="@string/two"
             android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
@@ -74,7 +74,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/tres"
+            android:text="@string/three"
             android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
@@ -86,7 +86,7 @@
             android:layout_marginBottom="-80dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/cuatro"
+            android:text="@string/four"
             android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 
@@ -98,7 +98,7 @@
             android:layout_marginBottom="20dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/cinco"
+            android:text="@string/five"
             android:textColor="@color/activityBackground"
             android:textSize="20sp" />
 

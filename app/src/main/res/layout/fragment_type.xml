@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:fontFamily="@font/roboto_medium"
-                android:text="@string/sospechoso"
+                android:text="@string/suspect"
                 android:textColor="@android:color/black" />
 
             <Button
@@ -63,7 +63,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/background_add_location"
                 android:fontFamily="@font/roboto_black"
-                android:text="@string/asault"
+                android:text="@string/assault"
                 android:textColor="@color/activityBackground"
                 android:textSize="12sp" />
 
@@ -74,7 +74,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/background_add_location"
                 android:fontFamily="@font/roboto_black"
-                android:text="@string/vandalismo"
+                android:text="@string/vandalism"
                 android:textColor="@color/activityBackground"
                 android:textSize="12sp" />
 
@@ -85,7 +85,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/background_add_location"
                 android:fontFamily="@font/roboto_black"
-                android:text="@string/acoso"
+                android:text="@string/harassment"
                 android:textColor="@color/activityBackground"
                 android:textSize="12sp" />
 
@@ -96,56 +96,12 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/background_add_location"
                 android:fontFamily="@font/roboto_black"
-                android:text="@string/personasAD"
+                android:text="@string/alcohol_traffic"
                 android:textColor="@color/activityBackground"
                 android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/btn_unintentionalViolene"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/background_add_location"
-                android:fontFamily="@font/roboto_black"
-                android:text="@string/violenciaNoIntencional"
-                android:textColor="@color/activityBackground"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/btn_pedestrianHazard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/background_add_location"
-                android:fontFamily="@font/roboto_black"
-                android:text="@string/peligroPeatonal"
-                android:textColor="@color/activityBackground"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/btn_healtHazard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/background_add_location"
-                android:fontFamily="@font/roboto_black"
-                android:text="@string/peligroSanitario"
-                android:textColor="@color/activityBackground"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/btn_highPollution"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/background_add_location"
-                android:fontFamily="@font/roboto_black"
-                android:text="@string/altaContaminacion"
-                android:textColor="@color/activityBackground"
-                android:textSize="12sp" />
-
         </LinearLayout>
     </ScrollView>
+
     <Button
         android:id="@+id/btn_skip2"
         android:layout_width="match_parent"

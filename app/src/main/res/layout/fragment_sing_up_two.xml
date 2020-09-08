@@ -29,7 +29,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="@string/genero"
+                android:text="@string/gender"
                 android:textColor="@android:color/black" />
 
 
@@ -43,13 +43,13 @@
                     android:id="@+id/radioButtonHombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/hombre" />
+                    android:text="@string/male" />
 
                 <RadioButton
                     android:id="@+id/radioButtonMujer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mujer" />
+                    android:text="@string/female" />
             </RadioGroup>
 
             <TextView
@@ -59,7 +59,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="@string/FechaNacimiento"
+                android:text="@string/birthday"
                 android:textColor="@android:color/black" />
 
             <DatePicker
@@ -78,7 +78,7 @@
             android:layout_marginBottom="20dp"
             android:background="@drawable/container1"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/continuar"
+            android:text="@string/next"
             android:textColor="@color/activityBackground" />
 
         </LinearLayout>

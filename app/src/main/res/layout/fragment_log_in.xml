@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/bienvenida"
+            android:text="@string/welcome_message"
             android:textAlignment="center"
             android:textColor="@color/activityBackground"
             android:textSize="30sp" />
@@ -36,7 +36,7 @@
             android:layout_marginTop="20dp"
             android:autofillHints="username"
             android:fontFamily="@font/roboto_medium"
-            android:hint="@string/NickName"
+            android:hint="@string/nick_name"
             android:inputType="textNoSuggestions"
             android:textColor="@color/colorSecondaryDark"
             android:textColorHint="@color/colorSecondaryLight" />
@@ -48,7 +48,7 @@
             android:layout_marginTop="10dp"
             android:autofillHints="username"
             android:fontFamily="@font/roboto_medium"
-            android:hint="@string/Contraseña"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:textColor="@color/colorSecondaryDark"
             android:textColorHint="@color/colorSecondaryLight" />
@@ -60,7 +60,7 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/red_button"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/IniciarSesion"
+            android:text="@string/log_in"
             android:textColor="@color/colorSecondary"
             android:textSize="16sp" />
 
@@ -73,7 +73,7 @@
             android:background="@android:color/transparent"
             android:fontFamily="@font/roboto_medium"
             android:padding="10dp"
-            android:text="@string/Registrarse"
+            android:text="@string/create_new_account"
             android:textColor="@color/colorSecondaryDark"
             android:textSize="16sp"/>
 

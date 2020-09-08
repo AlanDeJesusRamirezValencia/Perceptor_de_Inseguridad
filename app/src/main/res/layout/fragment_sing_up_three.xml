@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:autofillHints="nationality"
-                android:hint="@string/nacionalidad"
+                android:hint="@string/nationality"
                 android:inputType="textNoSuggestions"
                 android:textColorHint="@color/colorSecondaryLight"
                 android:textColor="@color/colorSecondaryDark"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:autofillHints="nationality"
-                android:hint="@string/ocupacion"
+                android:hint="@string/occupation"
                 android:inputType="textNoSuggestions"
                 android:textColorHint="@color/colorSecondaryLight"
                 android:textColor="@color/colorSecondaryDark" />
@@ -51,7 +51,7 @@
                 android:layout_gravity="start"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/nivel_socioeconomico"
+                android:text="@string/socioeconomic_level"
                 android:textColor="@android:color/black" />
 
             <RadioGroup
@@ -64,19 +64,19 @@
                     android:id="@+id/radioButtonBajo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/bajo" />
+                    android:text="@string/low" />
 
                 <RadioButton
                     android:id="@+id/radioButtonMedio"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/medio" />
+                    android:text="@string/half" />
 
                 <RadioButton
                     android:id="@+id/radioButtonAlto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/alto" />
+                    android:text="@string/high" />
             </RadioGroup>
 
             <Button
@@ -87,7 +87,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/container1"
                 android:fontFamily="@font/roboto_black"
-                android:text="@string/continuar"
+                android:text="@string/next"
                 android:textColor="@color/activityBackground" />
 
             <Button
@@ -97,7 +97,7 @@
                 android:layout_gravity="end"
                 android:background="@android:color/transparent"
                 android:padding="10dp"
-                android:text="@string/omitir_y_registrar"
+                android:text="@string/skip_and_create_new_account"
                 android:textColor="@color/colorSecondaryDark"
                 android:textSize="16sp" />
 

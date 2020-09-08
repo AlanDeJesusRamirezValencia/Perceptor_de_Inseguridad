@@ -78,7 +78,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
-            android:text="@string/onFoot"
+            android:text="@string/on_foot"
             android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 
@@ -90,7 +90,7 @@
             android:layout_marginBottom="-70dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
-            android:text="@string/atLocalWork"
+            android:text="@string/at_local_work"
             android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 
@@ -102,7 +102,7 @@
             android:layout_marginBottom="20dp"
             android:background="@drawable/background_add_location"
             android:fontFamily="sans-serif-black"
-            android:text="@string/atHouse"
+            android:text="@string/at_home"
             android:textColor="@color/activityBackground"
             android:textSize="12sp" />
 

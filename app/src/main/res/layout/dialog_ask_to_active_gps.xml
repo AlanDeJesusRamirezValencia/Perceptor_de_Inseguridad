@@ -29,5 +29,5 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/roboto_black"
         android:textColor="@color/colorSecondary"
-        android:text="@string/aceptar" />
+        android:text="@string/accept" />
 </LinearLayout>

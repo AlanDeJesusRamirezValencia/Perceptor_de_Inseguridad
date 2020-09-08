@@ -1,138 +1,135 @@
 <resources>
-    <string name="app_name">Perceptor de Inseguridad</string>
+    <string name="app_name">Insecurity Perceiver</string>
 
     <!--Main fragment-->
-    <string name="titulo_actitityMain">Perceptor de Inseguridad</string>
-    <string name="nivel_percepcion">Nivel de Percepción</string>
-    <string name="cancelar">cancelar</string>
-    <string name="uno">1</string>
-    <string name="dos">2</string>
-    <string name="tres">3</string>
-    <string name="cuatro">4</string>
-    <string name="cinco">5</string>
-    <string name="activador">Enviar</string>
-    <string name="enviado">Enviado</string>
-    <string name="aceptar">Aceptar</string>
-    <string name="titulo_reporte">Reporte de percepción</string>
-    <string name="añadir_percepcion">Añadir percepción</string>
+    <string name="level_of_perception">Level of Perception</string>
+    <string name="cancel">Cancel</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="send">Send</string>
+    <string name="sent_state">Sent</string>
+    <string name="accept">Accept</string>
+    <string name="report_title">Report of perception</string>
+    <string name="add_perception">Add perception</string>
 
     <!--Context Dialog-->
-    <string name="context">Contexto</string>
-    <string name="public_transport">Transporte\npublico</string>
-    <string name="private_transport">Transporte\nprivado</string>
-    <string name="onFoot">A pié</string>
-    <string name="atLocalWork">Trabajo\nlocal</string>
-    <string name="atHouse">En casa</string>
+    <string name="context">Context</string>
+    <string name="public_transport">Transport\n(Public)</string>
+    <string name="private_transport">Transport\n(Private)</string>
+    <string name="on_foot">On foot</string>
+    <string name="at_local_work">Local\nwork</string>
+    <string name="at_home">At home</string>
 
-    <string name="valorInseguridad">Valor De Inseguridad</string>
-    <string name="nivel">Nivel</string>
-    <string name="coordenadasGeograficas">Coordenadas Geograficas</string>
-    <string name="latitud">Latitud</string>
-    <string name="longitud">Longitud</string>
-    <string name="percepcion">Percepción</string>
+    <string name="value_insecurity">Insecurity Value</string>
+    <string name="level">Level</string>
+    <string name="geographical_coordinates">Geographical Coordinates</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="perception">Perception</string>
     <string name="utm">UTM</string>
     <string name="x">X</string>
     <string name="y">Y</string>
-    <string name="zona">Zona</string>
-    <string name="hemisferio">Hemisferio</string>
-    <string name="logout">Cerrar Sesión</string>
+    <string name="zone">Zone</string>
+    <string name="hemisphere">Hemisphere</string>
+    <string name="log_out">Log Out</string>
 
     <!--Inicio de sesion-->
-    <string name="IniciarSesion">Iniciar Sesión</string>
-    <string name="Registrarse">Regístrate aquí!</string>
-    <string name="NickName">Usuario</string>
-    <string name="FechaNacimiento">Fecha de Nacimiento</string>
-    <string name="Contraseña">Contraseña</string>
-    <string name="mantenerSesionIniciada">Recordar Sesión</string>
+    <string name="log_in">Log In</string>
+    <string name="create_new_account">New Account</string>
+    <string name="nick_name">User</string>
+    <string name="birthday">Birthday</string>
+    <string name="password">Password</string>
 
     <!--Registro de usuario-->
-    <string name="titulo_RegistroUsuario">Nuevo Usuario</string>
-    <string name="confirmarContraseña">Confirmar contraseña</string>
-    <string name="dia">Día</string>
-    <string name="mes">Mes</string>
-    <string name="año">Año</string>
-    <string name="genero">Genero</string>
-    <string name="hombre">Hombre</string>
-    <string name="mujer">Mujer</string>
-    <string name="registrar">Registrar</string>
-    <string name="medio">Medio</string>
-    <string name="bajo">Bajo</string>
-    <string name="alto">Alto</string>
-    <string name="nacionalidad">Nacionalidad</string>
-    <string name="nivel_socioeconomico">Nivel Socioeconomico</string>
-    <string name="ocupacion">Ocupación</string>
+    <string name="title_sign_up">New Account</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="half">Half</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="nationality">Nationality</string>
+    <string name="socioeconomic_level">Socioeconomic Level</string>
+    <string name="occupation">Occupation</string>
 
     <!--Perfil-->
-    <string name="profile">Perfil</string>
+    <string name="profile">Profile</string>
 
     <!--Editar perfil-->
-    <string name="edit_profile">Editar Perfil</string>
+    <string name="edit_profile">Edit Profile</string>
 
     <!--Tipo de peligro-->
-    <string name="type_of_danger">Tipo de Peligro</string>
-    <string name="sospechoso">sospechoso</string>
-    <string name="leve">Leve</string>
-    <string name="menos_grave">Menos grave</string>
-    <string name="grave">Grave</string>
-    <string name="muy_grave">Muy grave</string>
+    <string name="type_of_danger">Type de Danger</string>
+    <string name="suspect">Suspect</string>
+    <string name="less_serious">Less serious</string>
+    <string name="something_serious">Something serious</string>
+    <string name="serious">Serious</string>
+    <string name="very_serious">Very serious</string>
 
-    <string name="personas_armadas">personas portando armas</string>
-    <string name="drogas">Venta/consumo de drogadas</string>
-    <string name="venta_de_drogas_alcohol">Personas en estado de ebriedad</string>
-    <string name="acoso">Acoso</string>
+    <string name="armed_person">Armed Person</string>
+    <string name="drugs_traffic">Drugs sales/purchase</string>
+    <string name="alcohol_traffic">Drunk people</string>
+    <string name="harassment">Harassment</string>
     
-    <string name="robo">Robo</string>
-    <string name="vandalismo">Vandalismo</string>
+    <string name="robbery">Robbery</string>
+    <string name="vandalism">Vandalism</string>
     
-    <string name="asault">Asalto</string>
-    <string name="allanamiento">Allanamiento de morada</string>
+    <string name="assault">Assault</string>
+    <string name="forced_entry">Forced Entry</string>
     
-    <string name="secuestro">Secuestro</string>
-    <string name="abuso_sexual">Abuso sexual</string>
-    <string name="agresion_agravada">Agresión agravada (Lesiones)</string>
+    <string name="kidnapping">Kidnapping</string>
+    <string name="sexual_abuse">Sexual abuse</string>
+    <string name="aggravated_aggression">Aggravated aggression (Injury)</string>
 
-    <string name="homicidio">Homicidio</string>
-    <string name="terrorismo">Terrorismo</string>
+    <string name="murder">Murder</string>
+    <string name="terrorism">Terrorism</string>
 
-    <string name="skip">Omitir</string>
+    <string name="skip">Skip</string>
 
     <!--Enviando-->
-    <string name="sending">Enviando</string>
+    <string name="sending">Sending</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--Mensaje para pedir la activacion del gps-->
-    <string name="askToActivateGPS">No fue posible acceder\na la ubicación.\nAsegurece de que el GPS\n y WiFi estén activados</string>
+    <string name="askToActivateGPS">Location not found\nMake sure GPS and\nWiFi are enabled</string>
+    <string name="high_accuracy_enable">Make sure GPS is set to "High Accuracy" mode.</string>
 
     <string name="logo">Logo</string>
     <string name="start_location">Start Location</string>
-    <string name="exit">exit</string>
-    <string name="sent">sent</string>
-    <string name="bienvenida">Perceptor de Inseguridad</string>
-    <string name="sing_up_title">Registro</string>
-    <string name="continuar">Continuar</string>
-    <string name="sing_up_two_title">Datos Secundarios</string>
-    <string name="sing_up_three_title">Datos Opcionales</string>
-    <string name="back">atras</string>
-    <string name="valor_vacio">--</string>
-    <string name="mis_percepciones">Mis percepciones:</string>
-    <string name="omitir_y_registrar">Omitir y Registrar</string>
-    <string name="detalles">Detalles</string>
-    <string name="correo">Correo Electrónico</string>
-    <string name="pendientes">Percepciones pendientes</string>
-    <string name="id_usuario">ID usuario</string>
-    <string name="edad">Edad</string>
+    <string name="exit">Exit</string>
+    <string name="sent">Sent</string>
+    <string name="welcome_message">Insecurity Perceiver</string>
+    <string name="sing_up_title">Sign Up</string>
+    <string name="next">Continue</string>
+    <string name="back">Back</string>
+    <string name="empty_value">--</string>
+    <string name="my_perceptions">My perceptions:</string>
+    <string name="skip_and_create_new_account">Skip and Create New Account</string>
+    <string name="report">Report</string>
+    <string name="email">Email</string>
+    <string name="pend_perception">Pend Perception</string>
+    <string name="id_user">ID user</string>
+    <string name="age">Age</string>
 
-    <string name="user_image">Imagen de usuario</string>
-    <string name="take_a_photo">Tomar fotografía</string>
+    <string name="user_image">User Image</string>
+    <string name="take_a_photo">Take a photo</string>
 
-    <string name="map">Mapa</string>
-    <string name="history">Historial</string>
+    <string name="map">Map</string>
+    <string name="history">History</string>
 
     <!--Navigation bar-->
-    <string name="go_to_user">Ir a usuario</string>
-    <string name="go_to_settings">Ir a configuraciones</string>
-    <string name="go_to_start_location">Ir a añadir percepción</string>
-    <string name="go_to_history">Ir al historial</string>
-    <string name="go_to_map">Ir al mapa</string>
-    <string name="intern_notification">Notificación</string>
+    <string name="go_to_user">Go to user</string>
+    <string name="go_to_settings">Go to settings</string>
+    <string name="go_to_start_location">Go to add perception</string>
+    <string name="go_to_history">Go to history</string>
+    <string name="go_to_map">Go to map</string>
+    <string name="intern_notification">Notification</string>
 </resources>

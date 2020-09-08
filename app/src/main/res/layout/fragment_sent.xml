@@ -19,7 +19,7 @@
             android:layout_gravity="start"
             android:layout_marginStart="20dp"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/enviado"
+            android:text="@string/sent"
             android:textColor="@color/colorPrimary"
             android:textSize="27sp" />
 
@@ -56,8 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="70dp"
             android:background="@drawable/background_add_location"
-            android:contentDescription="@string/titulo_reporte"
-            android:text="@string/detalles"
+            android:contentDescription="@string/report_title"
+            android:text="@string/report"
             android:textColor="@color/colorSecondary" />
 
     </LinearLayout>

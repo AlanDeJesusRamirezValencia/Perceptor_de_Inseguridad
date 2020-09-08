@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/user_username"
-            android:text="@string/NickName"
+            android:text="@string/nick_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
@@ -66,50 +66,50 @@
             android:id="@+id/user_id_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/id_usuario" />
+            android:text="@string/id_user" />
 
         <TextView
             android:id="@+id/user_fecha_nacimiento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/FechaNacimiento" />
+            android:text="@string/birthday" />
 
         <TextView
             android:id="@+id/user_edad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edad" />
+            android:text="@string/age" />
 
         <TextView
             android:id="@+id/user_genero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/genero" />
+            android:text="@string/gender" />
 
         <TextView
             android:id="@+id/user_nacionalidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nacionalidad" />
+            android:text="@string/nationality" />
 
         <TextView
             android:id="@+id/user_nivel_socioeconomico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nivel_socioeconomico" />
+            android:text="@string/socioeconomic_level" />
 
         <TextView
             android:id="@+id/user_ocupacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ocupacion" />
+            android:text="@string/occupation" />
 
         <Button
             android:id="@+id/btn_logout"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/logout"
+            android:text="@string/log_out"
             android:background="@drawable/container1"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
