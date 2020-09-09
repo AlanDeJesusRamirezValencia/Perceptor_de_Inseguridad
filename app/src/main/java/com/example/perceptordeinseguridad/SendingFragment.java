@@ -82,7 +82,7 @@ public class SendingFragment extends Fragment {
      * @see StringRequest
      */
     private void sendRequest() {
-        setParametros();
+        setParameters();
         String URL = "https://www.edacarquitectos.com/perceptorDeInseguridad/addperception.php";
         StringRequest request = new StringRequest(method, URL, this::response, this::errorResponse){
             @Override
@@ -97,22 +97,22 @@ public class SendingFragment extends Fragment {
      * The JSONObject response is used to set local TextView fields text.
      */
     private void response(@NonNull String response){
-        if(!(response.equals("invalido") || response.equals(""))){
+        if(!(response.equals("invalid") || response.equals(""))){
             Bundle args = new Bundle();
             args.putString("idPerception", response);
             Navigation.findNavController(view)
                     .navigate(R.id.sendingFrag_to_sentFrag, args);
         }
-        else Toast.makeText(requireActivity(), "Datos incompletos", SHORT).show();
+        else Toast.makeText(requireActivity(), "incomplete data", SHORT).show();
     }
 
     /** Failed connection */
     private void errorResponse(VolleyError error){
-        Toast.makeText(requireActivity(), "Sin conexión", SHORT).show();
+        Toast.makeText(requireActivity(), "Disconnected", SHORT).show();
     }
 
     /** Set the request parameters */
-    public void setParametros() {
+    public void setParameters() {
         double longitude = Double.parseDouble(
                 Objects.requireNonNull(requireArguments().getString("longitude2")));
         double latitude = Double.parseDouble(
@@ -121,10 +121,10 @@ public class SendingFragment extends Fragment {
         parameters.put("longitud", requireArguments().getString("longitude2"));
         parameters.put("latitud", requireArguments().getString("latitude2"));
         parameters.put("valor_inseguridad", requireArguments().getString("level3"));
-        parameters.put("y", utm.getUMTY() + "");
-        parameters.put("x", utm.getUMTX() + "");
-        parameters.put("zona", utm.getZona() + "");
-        parameters.put("hemisferio", utm.getHemisferio() + "");
+        parameters.put("y", utm.getY() + "");
+        parameters.put("x", utm.getX() + "");
+        parameters.put("zona", utm.getZone() + "");
+        parameters.put("hemisferio", utm.getHemisphere() + "");
         parameters.put("fk_usuario", user.getString("user_id", "1"));
         parameters.put("contexto", requireArguments().getString("context2"));
         parameters.put("tipo_peligro", requireArguments().getString("type"));

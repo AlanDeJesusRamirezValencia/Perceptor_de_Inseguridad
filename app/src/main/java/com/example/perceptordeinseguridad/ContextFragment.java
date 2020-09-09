@@ -123,12 +123,12 @@ public class ContextFragment extends Fragment implements View.OnClickListener {
      */
     @Override
     public void onClick(@NonNull View v) {
-        if(v.getId() == R.id.button_privateTransport) args.putString("context", "transporte privado");
-        if(v.getId() == R.id.button_publicTransport) args.putString("context", "transporte publico");
-        if(v.getId() == R.id.button_atLocalWork) args.putString("context", "trabajo local");
-        if(v.getId() == R.id.button_onFoot) args.putString("context", "a pie");
-        if(v.getId() == R.id.button_atHome) args.putString("context", "en casa");
-        if(v.getId() == R.id.button_skip) args.putString("context", "desconocido");
+        if(v.getId() == R.id.button_privateTransport) args.putString("context", "1");
+        if(v.getId() == R.id.button_publicTransport) args.putString("context", "2");
+        if(v.getId() == R.id.button_atLocalWork) args.putString("context", "3");
+        if(v.getId() == R.id.button_onFoot) args.putString("context", "4");
+        if(v.getId() == R.id.button_atHome) args.putString("context", "5");
+        if(v.getId() == R.id.button_skip) args.putString("context", "6");
         Navigation.findNavController(v).navigate(R.id.contextFrag_to_typeFrag, args);
     }
 }

@@ -61,7 +61,7 @@ public class CustomRequest extends Request<JSONObject> {
         }
     }
 
-    /** A simple overriden {@link Request#deliverResponse(Object)} */
+    /** An overridden  {@link Request#deliverResponse(Object)} */
     @Override
     protected void deliverResponse(JSONObject response) {
         listener.onResponse(response);

@@ -24,13 +24,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/welcome_message"
+            android:text="@string/app_name"
             android:textAlignment="center"
             android:textColor="@color/activityBackground"
             android:textSize="30sp" />
 
         <EditText
-            android:id="@+id/editTextUsuarioLogIn"
+            android:id="@+id/editTextUserLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -42,7 +42,7 @@
             android:textColorHint="@color/colorSecondaryLight" />
 
         <EditText
-            android:id="@+id/editTextContrasenalogin"
+            android:id="@+id/editTextPasswordLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -54,7 +54,7 @@
             android:textColorHint="@color/colorSecondaryLight" />
 
         <Button
-            android:id="@+id/buttonIniciarSesion"
+            android:id="@+id/buttonLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -65,7 +65,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/buttonIrARegistrar"
+            android:id="@+id/buttonGoToSingUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"

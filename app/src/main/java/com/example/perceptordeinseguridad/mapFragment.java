@@ -95,7 +95,7 @@ public class mapFragment extends Fragment implements OnMapReadyCallback {
 
     /** Failed connection */
     private void errorResponse(VolleyError error){
-        Toast.makeText(requireActivity(), "Sin conexión", duration).show();
+        Toast.makeText(requireActivity(), "Disconnected", duration).show();
     }
 
     @Override
@@ -125,7 +125,7 @@ public class mapFragment extends Fragment implements OnMapReadyCallback {
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
-                Toast.makeText(requireActivity(), "Valores incompatibles", duration).show();
+                Toast.makeText(requireActivity(), "Incompatible values", duration).show();
             }
         }, this::errorResponse);
         queue.add(request);

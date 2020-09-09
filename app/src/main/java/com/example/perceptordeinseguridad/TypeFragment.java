@@ -33,7 +33,7 @@ public class TypeFragment extends Fragment implements View.OnClickListener {
         close = view.findViewById(R.id.btn_closeTypeOfDanger);
         harassment = view.findViewById(R.id.btn_harassment);
         vandalism = view.findViewById(R.id.btn_vandalism);
-        assault = view.findViewById(R.id.btn_asault);
+        assault = view.findViewById(R.id.btn_assault);
         skip = view.findViewById(R.id.btn_skip2);
         args = new Bundle();
         args.putString("latitude2", requireArguments().getString("latitude"));
@@ -62,7 +62,7 @@ public class TypeFragment extends Fragment implements View.OnClickListener {
             args.putString("type","1");
         if(v.getId() == R.id.btn_vandalism)
             args.putString("type","2");
-        if(v.getId() == R.id.btn_asault)
+        if(v.getId() == R.id.btn_assault)
             args.putString("type", "3");
         if(v.getId() == R.id.btn_harassment)
             args.putString("type","4");

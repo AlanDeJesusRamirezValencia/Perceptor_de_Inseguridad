@@ -23,7 +23,7 @@
             android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/nacionalidad"
+                android:id="@+id/nationality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -35,7 +35,7 @@
                 />
 
             <EditText
-                android:id="@+id/ocupacion"
+                android:id="@+id/occupation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -61,19 +61,19 @@
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radioButtonBajo"
+                    android:id="@+id/radioButtonLow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/low" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonMedio"
+                    android:id="@+id/radioButtonMiddle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="@string/half" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonAlto"
+                    android:id="@+id/radioButtonHigh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/high" />
@@ -91,7 +91,7 @@
                 android:textColor="@color/activityBackground" />
 
             <Button
-                android:id="@+id/buttonOmitirYRegistrar"
+                android:id="@+id/buttonSkipAndRecord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

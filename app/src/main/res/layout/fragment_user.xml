@@ -69,37 +69,37 @@
             android:text="@string/id_user" />
 
         <TextView
-            android:id="@+id/user_fecha_nacimiento"
+            android:id="@+id/user_birthday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/birthday" />
 
         <TextView
-            android:id="@+id/user_edad"
+            android:id="@+id/user_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/age" />
 
         <TextView
-            android:id="@+id/user_genero"
+            android:id="@+id/user_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/gender" />
 
         <TextView
-            android:id="@+id/user_nacionalidad"
+            android:id="@+id/user_nationality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nationality" />
 
         <TextView
-            android:id="@+id/user_nivel_socioeconomico"
+            android:id="@+id/user_socioeconomicLevel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/socioeconomic_level" />
 
         <TextView
-            android:id="@+id/user_ocupacion"
+            android:id="@+id/user_occupation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/occupation" />

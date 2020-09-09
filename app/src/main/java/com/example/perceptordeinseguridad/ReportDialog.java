@@ -80,19 +80,19 @@ public class ReportDialog extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.dialog_report, container, false);
-        level = view.findViewById(R.id.tv_nivel);
-        latitude = view.findViewById(R.id.tv_latitud);
-        longitude = view.findViewById(R.id.tv_longitud);
+        level = view.findViewById(R.id.tv_level);
+        latitude = view.findViewById(R.id.tv_latitude);
+        longitude = view.findViewById(R.id.tv_longitude);
         x = view.findViewById(R.id.tv_x);
         y = view.findViewById(R.id.tv_y);
-        zone = view.findViewById(R.id.tv_zona);
-        hemisphere = view.findViewById(R.id.tv_hemisferio);
-        context = view.findViewById(R.id.tv_contexto);
-        type = view.findViewById(R.id.tv_tipo);
+        zone = view.findViewById(R.id.tv_zone);
+        hemisphere = view.findViewById(R.id.tv_hemisphere);
+        context = view.findViewById(R.id.tv_context);
+        type = view.findViewById(R.id.tv_type);
         queue = Volley.newRequestQueue(requireContext());
         parameters = new HashMap<>();
         parameters.put("id_percepcion", requireArguments().getString("perception_id"));
-        close = view.findViewById(R.id.button_cerrarReporte);
+        close = view.findViewById(R.id.button_closeReport);
         return view;
     }
 
@@ -129,28 +129,28 @@ public class ReportDialog extends DialogFragment {
      */
     private void response(JSONObject response){
         try {
-            JSONArray arreglo = response.getJSONArray("datos");
-            JSONObject respuesta = arreglo.getJSONObject(0);
-            if (!(respuesta.getString("id_percepcion").equals(""))){
-                level.setText(respuesta.getString("valor_inseguridad"));
-                hemisphere.setText(respuesta.getString("hemisferio"));
-                context.setText(respuesta.getString("contexto"));
-                type.setText(respuesta.getString("tipo_peligro"));
-                longitude.setText(respuesta.getString("longitud"));
-                latitude.setText(respuesta.getString("latitud"));
-                zone.setText(respuesta.getString("zona"));
-                x.setText(respuesta.getString("x"));
-                y.setText(respuesta.getString("y"));
+            JSONArray array = response.getJSONArray("datos");
+            JSONObject JSONResponse = array.getJSONObject(0);
+            if (!(JSONResponse.getString("id_percepcion").equals(""))){
+                level.setText(JSONResponse.getString("valor_inseguridad"));
+                hemisphere.setText(JSONResponse.getString("hemisferio"));
+                context.setText(JSONResponse.getString("contexto"));
+                type.setText(JSONResponse.getString("tipo_peligro"));
+                longitude.setText(JSONResponse.getString("longitud"));
+                latitude.setText(JSONResponse.getString("latitud"));
+                zone.setText(JSONResponse.getString("zona"));
+                x.setText(JSONResponse.getString("x"));
+                y.setText(JSONResponse.getString("y"));
             }
             else
-                Toast.makeText(requireActivity(), "Reporte erroneo", SHORT).show();
+                Toast.makeText(requireActivity(), "Wrong report", SHORT).show();
         } catch (JSONException e) {
-            Toast.makeText(requireActivity(), "Arreglo no valido", SHORT).show();
+            Toast.makeText(requireActivity(), "Invalid array", SHORT).show();
         }
     }
 
     /** Failed connection */
     private void errorResponse(VolleyError error){
-        Toast.makeText(requireActivity(), "Sin conexión", SHORT).show();
+        Toast.makeText(requireActivity(), "Disconnected", SHORT).show();
     }
 }

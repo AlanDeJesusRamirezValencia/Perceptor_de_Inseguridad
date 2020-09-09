@@ -1,21 +1,22 @@
 <resources>
     <string name="app_name">Insecurity Perceiver</string>
 
-    <!--Main fragment-->
+    <!--General-->
+    <string name="logo">Logo</string>
+
+    <!--Start Location-->
+    <string name="start_location">Start Location</string>
+    <string name="add_perception">Add perception</string>
+
+    <!--Level perception-->
     <string name="level_of_perception">Level of Perception</string>
-    <string name="cancel">Cancel</string>
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="four">4</string>
     <string name="five">5</string>
-    <string name="send">Send</string>
-    <string name="sent_state">Sent</string>
-    <string name="accept">Accept</string>
-    <string name="report_title">Report of perception</string>
-    <string name="add_perception">Add perception</string>
 
-    <!--Context Dialog-->
+    <!--Contexts-->
     <string name="context">Context</string>
     <string name="public_transport">Transport\n(Public)</string>
     <string name="private_transport">Transport\n(Private)</string>
@@ -23,6 +24,9 @@
     <string name="at_local_work">Local\nwork</string>
     <string name="at_home">At home</string>
 
+    <!-- Perception Report-->
+    <string name="report_title">Report of perception</string>
+    <string name="report">Report</string>
     <string name="value_insecurity">Insecurity Value</string>
     <string name="level">Level</string>
     <string name="geographical_coordinates">Geographical Coordinates</string>
@@ -34,18 +38,19 @@
     <string name="y">Y</string>
     <string name="zone">Zone</string>
     <string name="hemisphere">Hemisphere</string>
-    <string name="log_out">Log Out</string>
+    <string name="empty_value">--</string>
 
-    <!--Inicio de sesion-->
+    <!--Log In-->
     <string name="log_in">Log In</string>
     <string name="create_new_account">New Account</string>
     <string name="nick_name">User</string>
     <string name="birthday">Birthday</string>
     <string name="password">Password</string>
 
-    <!--Registro de usuario-->
-    <string name="title_sign_up">New Account</string>
+    <!--Sing Up-->
+    <string name="sing_up_title">Sign Up</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="email">Email</string>
     <string name="day">Day</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
@@ -59,70 +64,53 @@
     <string name="nationality">Nationality</string>
     <string name="socioeconomic_level">Socioeconomic Level</string>
     <string name="occupation">Occupation</string>
+    <string name="skip_and_create_new_account">Skip and Create New Account</string>
 
-    <!--Perfil-->
+    <!--Profile-->
     <string name="profile">Profile</string>
+    <string name="user_image">User Image</string>
+    <string name="take_a_photo">Take a photo</string>
+    <string name="id_user">ID user</string>
+    <string name="age">Age</string>
+    <string name="log_out">Log Out</string>
 
-    <!--Editar perfil-->
+    <!--EditProfile-->
     <string name="edit_profile">Edit Profile</string>
 
-    <!--Tipo de peligro-->
+    <!--Types of Danger-->
     <string name="type_of_danger">Type de Danger</string>
     <string name="suspect">Suspect</string>
     <string name="less_serious">Less serious</string>
     <string name="something_serious">Something serious</string>
     <string name="serious">Serious</string>
     <string name="very_serious">Very serious</string>
-
     <string name="armed_person">Armed Person</string>
     <string name="drugs_traffic">Drugs sales/purchase</string>
     <string name="alcohol_traffic">Drunk people</string>
     <string name="harassment">Harassment</string>
-    
     <string name="robbery">Robbery</string>
     <string name="vandalism">Vandalism</string>
-    
     <string name="assault">Assault</string>
     <string name="forced_entry">Forced Entry</string>
-    
     <string name="kidnapping">Kidnapping</string>
     <string name="sexual_abuse">Sexual abuse</string>
     <string name="aggravated_aggression">Aggravated aggression (Injury)</string>
-
     <string name="murder">Murder</string>
     <string name="terrorism">Terrorism</string>
 
-    <string name="skip">Skip</string>
-
-    <!--Enviando-->
+    <!--Send, sending and sent-->
+    <string name="send">Send</string>
     <string name="sending">Sending</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sent">Sent</string>
 
-    <!--Mensaje para pedir la activacion del gps-->
+    <!--Ask to active gps-->
     <string name="askToActivateGPS">Location not found\nMake sure GPS and\nWiFi are enabled</string>
     <string name="high_accuracy_enable">Make sure GPS is set to "High Accuracy" mode.</string>
 
-    <string name="logo">Logo</string>
-    <string name="start_location">Start Location</string>
-    <string name="exit">Exit</string>
-    <string name="sent">Sent</string>
-    <string name="welcome_message">Insecurity Perceiver</string>
-    <string name="sing_up_title">Sign Up</string>
-    <string name="next">Continue</string>
-    <string name="back">Back</string>
-    <string name="empty_value">--</string>
-    <string name="my_perceptions">My perceptions:</string>
-    <string name="skip_and_create_new_account">Skip and Create New Account</string>
-    <string name="report">Report</string>
-    <string name="email">Email</string>
-    <string name="pend_perception">Pend Perception</string>
-    <string name="id_user">ID user</string>
-    <string name="age">Age</string>
-
-    <string name="user_image">User Image</string>
-    <string name="take_a_photo">Take a photo</string>
-
+    <!--Maps-->
     <string name="map">Map</string>
+
+    <!--History-->
     <string name="history">History</string>
 
     <!--Navigation bar-->
@@ -132,4 +120,13 @@
     <string name="go_to_history">Go to history</string>
     <string name="go_to_map">Go to map</string>
     <string name="intern_notification">Notification</string>
+
+    <!--Generic Navigation-->
+    <string name="next">Continue</string>
+    <string name="back">Back</string>
+    <string name="skip">Skip</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="exit">Exit</string>
+
 </resources>

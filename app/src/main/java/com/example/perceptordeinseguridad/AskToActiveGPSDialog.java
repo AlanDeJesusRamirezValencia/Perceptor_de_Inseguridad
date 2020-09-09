@@ -32,7 +32,7 @@ public class AskToActiveGPSDialog extends DialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View v = inflater.inflate(R.layout.dialog_ask_to_active_gps, container, false);
-        accept = v.findViewById(R.id.button_aceptarGPS);
+        accept = v.findViewById(R.id.button_acceptGPS);
         return v;
     }
 

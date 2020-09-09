@@ -37,22 +37,22 @@ public class SingUpThreeFragment extends Fragment {
     /** Toasts duration */
     final int duration = Toast.LENGTH_SHORT;
 
-    /** Request method; */
+    /** Request method */
     final int method = Request.Method.POST;
 
     /** Used to navigate to other fragments */
     private View view;
 
-    private EditText nacionalidad;
-    private EditText ocupacion;
-    private RadioButton medio;
-    private RadioButton bajo;
-    private RadioButton alto;
-    private Button omitirYRegistrar;
+    private EditText nationality;
+    private EditText occupation;
+    private RadioButton middle;
+    private RadioButton low;
+    private RadioButton high;
+    private Button skipAndRecord;
     private Button registrar;
     private RequestQueue queue;
     private Map<String, String> parameters;
-    private String nivelSocioeconomico;
+    private String socioeconomicLevel;
 
     /**
      * Contains the processed response of the request.
@@ -64,13 +64,13 @@ public class SingUpThreeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.fragment_sing_up_three, container, false);
-        nacionalidad = view.findViewById(R.id.nacionalidad);
-        ocupacion = view.findViewById(R.id.ocupacion);
-        bajo = view.findViewById(R.id.radioButtonBajo);
-        medio = view.findViewById(R.id.radioButtonMedio);
-        alto = view.findViewById(R.id.radioButtonAlto);
+        nationality = view.findViewById(R.id.nationality);
+        occupation = view.findViewById(R.id.occupation);
+        low = view.findViewById(R.id.radioButtonLow);
+        middle = view.findViewById(R.id.radioButtonMiddle);
+        high = view.findViewById(R.id.radioButtonHigh);
         registrar = view.findViewById(R.id.buttonRegistrar1);
-        omitirYRegistrar = view.findViewById(R.id.buttonOmitirYRegistrar);
+        skipAndRecord = view.findViewById(R.id.buttonSkipAndRecord);
         queue = Volley.newRequestQueue(requireContext());
         parameters = new HashMap<>();
         this.view = view;
@@ -86,31 +86,31 @@ public class SingUpThreeFragment extends Fragment {
                 sendRequest();
             }
         });
-        omitirYRegistrar.setOnClickListener(v -> sendRequest());
+        skipAndRecord.setOnClickListener(v -> sendRequest());
     }
 
     private boolean checkFilledFields(){
-        if (nacionalidad.getText().toString().isEmpty()){
-            nacionalidad.setError("campo requerido");
+        if (nationality.getText().toString().isEmpty()){
+            nationality.setError("required field");
             return false;
         }
-        if (ocupacion.getText().toString().isEmpty()){
-            ocupacion.setError("campo requerido");
+        if (occupation.getText().toString().isEmpty()){
+            occupation.setError("required field");
             return false;
         }
-        if (!bajo.isChecked() && !medio.isChecked() && !alto.isChecked()) {
+        if (!low.isChecked() && !middle.isChecked() && !high.isChecked()) {
             Toast.makeText(
                     requireActivity(),
-                    "Nivel socioeconomico no asignado", duration).show();
+                    "Socioeconomic level to not assigned", duration).show();
             return false;
         }
         else {
-            if (bajo.isChecked())
-                nivelSocioeconomico = "bajo";
-            else if (medio.isChecked())
-                nivelSocioeconomico = "medio";
+            if (low.isChecked())
+                socioeconomicLevel = "bajo";
+            else if (middle.isChecked())
+                socioeconomicLevel = "medio";
             else
-                nivelSocioeconomico = "alto";
+                socioeconomicLevel = "alto";
         }
         return true;
     }
@@ -145,13 +145,13 @@ public class SingUpThreeFragment extends Fragment {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(requireActivity(), "Valores incompatibles", duration).show();
+            Toast.makeText(requireActivity(), "Incompatible data", duration).show();
         }
     }
 
     /** Failed connection */
     private void errorResponse(VolleyError error){
-        Toast.makeText(requireActivity(), "Sin conexión", duration).show();
+        Toast.makeText(requireActivity(), "disconnected", duration).show();
     }
 
     /**
@@ -177,7 +177,7 @@ public class SingUpThreeFragment extends Fragment {
             editor.apply();
         }  catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(requireActivity(), "Valores incompatibles", duration).show();
+            Toast.makeText(requireActivity(), "Incompatible data", duration).show();
         }
     }
 
@@ -190,8 +190,8 @@ public class SingUpThreeFragment extends Fragment {
     }
 
     private void setOptionalParameters() {
-        parameters.put("nivel_socioeconomico", nivelSocioeconomico);
-        parameters.put("nacionalidad", nacionalidad.getText().toString());
-        parameters.put("ocupacion", ocupacion.getText().toString());
+        parameters.put("nivel_socioeconomico", socioeconomicLevel);
+        parameters.put("nacionalidad", nationality.getText().toString());
+        parameters.put("ocupacion", occupation.getText().toString());
     }
 }

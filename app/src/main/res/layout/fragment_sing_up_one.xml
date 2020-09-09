@@ -30,7 +30,7 @@
         android:gravity="center">
 
         <EditText
-            android:id="@+id/correoElectronico"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -42,7 +42,7 @@
             android:fontFamily="@font/roboto_medium"/>
 
         <EditText
-            android:id="@+id/editTextUsuarioRegistro"
+            android:id="@+id/editTextUserSingUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -54,7 +54,7 @@
             android:fontFamily="@font/roboto_medium"/>
 
         <EditText
-            android:id="@+id/editTextContrasenaRegistro"
+            android:id="@+id/editTextPasswordSingUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -66,7 +66,7 @@
             android:fontFamily="@font/roboto_medium"/>
 
         <EditText
-            android:id="@+id/confirmarContraseña"
+            android:id="@+id/editTextConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -79,7 +79,7 @@
 
 
         <Button
-            android:id="@+id/button_continuar1"
+            android:id="@+id/button_continue1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

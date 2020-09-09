@@ -78,10 +78,10 @@ public class LogInFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.fragment_log_in, container, false);
-        username = view.findViewById(R.id.editTextUsuarioLogIn);
-        password = view.findViewById(R.id.editTextContrasenalogin);
-        logger = view.findViewById(R.id.buttonIniciarSesion);
-        singUp = view.findViewById(R.id.buttonIrARegistrar);
+        username = view.findViewById(R.id.editTextUserLogIn);
+        password = view.findViewById(R.id.editTextPasswordLogIn);
+        logger = view.findViewById(R.id.buttonLogIn);
+        singUp = view.findViewById(R.id.buttonGoToSingUp);
         parameters = new HashMap<>();
         queue = Volley.newRequestQueue(requireContext());
         this.view = view;
@@ -125,7 +125,7 @@ public class LogInFragment extends Fragment {
             userData = arreglo.getJSONObject(0);
             if(userData.getString("id_usuario").equals("")) {
                 storeUserData();
-                Toast.makeText(requireActivity(), "datos incorrectos", duration).show();
+                Toast.makeText(requireActivity(), "incorrect data", duration).show();
             }
             else{
                 storeUserData();
@@ -133,13 +133,13 @@ public class LogInFragment extends Fragment {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(requireActivity(), "Valores incompatibles", duration).show();
+            Toast.makeText(requireActivity(), "Incompatible values", duration).show();
         }
     }
 
     /** Failed connection */
     private void errorResponse(VolleyError error){
-        Toast.makeText(requireActivity(), "Sin conexión", duration).show();
+        Toast.makeText(requireActivity(), "Disconnected", duration).show();
     }
 
     /**
@@ -165,7 +165,7 @@ public class LogInFragment extends Fragment {
             editor.apply();
         }  catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(requireActivity(), "Valores incompatibles", duration).show();
+            Toast.makeText(requireActivity(), "Incompatible data", duration).show();
         }
     }
 

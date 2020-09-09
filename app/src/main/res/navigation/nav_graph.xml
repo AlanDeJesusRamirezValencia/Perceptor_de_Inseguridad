@@ -200,16 +200,16 @@
         android:label="fragment_sing_up_two"
         tools:layout="@layout/fragment_sing_up_two" >
         <argument
-            android:name="usuario"
+            android:name="user"
             app:argType="string" />
         <argument
-            android:name="contrasena"
+            android:name="password"
             app:argType="string" />
         <action
             android:id="@+id/singUpTwoFrag_to_singUpThreeFrag"
             app:destination="@id/singUpThreeFragment" />
         <argument
-            android:name="correo"
+            android:name="mail"
             app:argType="string" />
     </fragment>
     <fragment
@@ -218,16 +218,16 @@
         android:label="fragment_sing_up_three"
         tools:layout="@layout/fragment_sing_up_three" >
         <argument
-            android:name="user"
+            android:name="user2"
             app:argType="string" />
         <argument
-            android:name="password"
+            android:name="password2"
             app:argType="string" />
         <argument
-            android:name="genero"
+            android:name="gender"
             app:argType="string" />
         <argument
-            android:name="fecha"
+            android:name="birthday"
             app:argType="string" />
         <action
             android:id="@+id/singUpThreeFrag_to_startLocFrag"
@@ -235,7 +235,7 @@
             app:popUpTo="@id/singUpThreeFragment"
             app:popUpToInclusive="true" />
         <argument
-            android:name="mail"
+            android:name="mail2"
             app:argType="string" />
     </fragment>
     <dialog
@@ -269,9 +269,9 @@
     </fragment>
     <fragment
         android:id="@+id/hystoryFragment"
-        android:name="com.example.perceptordeinseguridad.HystoryFragment"
+        android:name="com.example.perceptordeinseguridad.HistoryFragment"
         android:label="fragment_hystory"
-        tools:layout="@layout/fragment_hystory" >
+        tools:layout="@layout/fragment_history" >
         <action
             android:id="@+id/hystoryFrag_to_mapFrag"
             app:destination="@id/mapFragment" />

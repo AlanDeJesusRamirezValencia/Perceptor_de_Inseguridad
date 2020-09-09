@@ -48,11 +48,11 @@ public class SingUpOneFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.fragment_sing_up_one, container, false);
-        email = view.findViewById(R.id.correoElectronico);
-        name = view.findViewById(R.id.editTextUsuarioRegistro);
-        password = view.findViewById(R.id.editTextContrasenaRegistro);
-        passwordConfirmation = view.findViewById(R.id.confirmarContraseña);
-        BtnContinue = view.findViewById(R.id.button_continuar1);
+        email = view.findViewById(R.id.editTextEmail);
+        name = view.findViewById(R.id.editTextUserSingUp);
+        password = view.findViewById(R.id.editTextPasswordSingUp);
+        passwordConfirmation = view.findViewById(R.id.editTextConfirmPassword);
+        BtnContinue = view.findViewById(R.id.button_continue1);
         queue = Volley.newRequestQueue(requireContext());
         parameters = new HashMap<>();
         this.view = view;
@@ -73,27 +73,27 @@ public class SingUpOneFragment extends Fragment {
         //if any data is empty, return false
 
         if (email.getText().toString().equals("")) {
-            this.email.setError("Campo vacío");
+            this.email.setError("Empty field");
             return false;
         }
 
         if (email.getText().toString().contains("@")){
             String[] parts = email.getText().toString().split("@");
             if (!parts[1].contains(".")){
-                this.email.setError("Formato de correo electrónico inválido");
+                this.email.setError("Invalid email format");
                 return false;
             }
         }
         else {
-            this.email.setError("Formato de correo electrónico inválido");
+            this.email.setError("Invalid email format");
         }
 
         if (name.getText().toString().equals("")) {
-            this.name.setError("Campo vacío");
+            this.name.setError("Empty field");
             return false;
         }
         if (password.getText().toString().equals("")) {
-            this.password.setError("Campo vacío");
+            this.password.setError("Empty field");
             return false;
         }
         return comparePasswords();
@@ -106,7 +106,7 @@ public class SingUpOneFragment extends Fragment {
      */
     private boolean comparePasswords(){
         if (!(password.getText().toString().equals(passwordConfirmation.getText().toString()))){
-            passwordConfirmation.setError("Contraseñas no coinciden");
+            passwordConfirmation.setError("Passwords do not match");
             password.setText("");
             passwordConfirmation.setText("");
             return false;
@@ -133,9 +133,9 @@ public class SingUpOneFragment extends Fragment {
     private void response(@NonNull String response){
         if (response.trim().equals("libre")){
             Bundle args = new Bundle();
-            args.putString("correo",email.getText().toString().trim());
-            args.putString("usuario", name.getText().toString().trim());
-            args.putString("contrasena",password.getText().toString());
+            args.putString("mail",email.getText().toString().trim());
+            args.putString("user", name.getText().toString().trim());
+            args.putString("password",password.getText().toString());
             Navigation.findNavController(view).navigate(R.id.singUpFrag_to_singUpTwoFrag, args);
         }
         else {
@@ -145,6 +145,6 @@ public class SingUpOneFragment extends Fragment {
 
     /** Failed connection */
     private void errorResponse(VolleyError error){
-        Toast.makeText(requireActivity(), "Sin conexión", SHORT).show();
+        Toast.makeText(requireActivity(), "Disconnected", SHORT).show();
     }
 }

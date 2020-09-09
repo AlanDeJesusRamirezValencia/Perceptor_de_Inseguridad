@@ -38,7 +38,7 @@ public class SentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.fragment_sent, container, false);
-        report = view.findViewById(R.id.imageButtonReporte);
+        report = view.findViewById(R.id.imageButtonReport);
         close = view.findViewById(R.id.button_closeSent);
         return view;
     }
