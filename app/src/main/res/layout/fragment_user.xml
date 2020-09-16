@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -37,6 +38,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="70dp"
+        android:layout_marginBottom="65dp"
         android:layout_marginEnd="20dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -105,6 +107,18 @@
             android:text="@string/occupation" />
 
         <Button
+            android:id="@+id/btn_goToEditUser"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile"
+            android:background="@drawable/container1"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/activityBackground"
+            android:fontFamily="@font/roboto_black"/>
+
+        <Button
             android:id="@+id/btn_logout"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -113,7 +127,7 @@
             android:background="@drawable/container1"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:textColor="@color/colorSecondary"
+            android:textColor="@color/activityBackground"
             android:fontFamily="@font/roboto_black"/>
     </LinearLayout>
 

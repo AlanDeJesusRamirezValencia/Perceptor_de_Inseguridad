@@ -21,13 +21,13 @@
         android:textSize="16sp"/>
 
     <Button
-        android:background="@drawable/red_button"
+        android:background="@drawable/container1"
         android:id="@+id/button_acceptGPS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/roboto_black"
-        android:textColor="@color/colorSecondary"
+        android:textColor="@color/activityBackground"
         android:text="@string/accept" />
 </LinearLayout>

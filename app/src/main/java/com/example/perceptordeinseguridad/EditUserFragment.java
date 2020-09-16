@@ -12,9 +12,12 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -32,7 +35,7 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SingUpThreeFragment extends Fragment {
+public class EditUserFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     /** Toasts duration */
     final int duration = Toast.LENGTH_SHORT;
@@ -43,13 +46,14 @@ public class SingUpThreeFragment extends Fragment {
     /** Used to navigate to other fragments */
     private View view;
 
-    private EditText nationality;
+    private Spinner nationalities;
+    private int selectedCountry = 0;
     private EditText occupation;
     private RadioButton middle;
     private RadioButton low;
     private RadioButton high;
     private Button skipAndRecord;
-    private Button registrar;
+    private Button record;
     private RequestQueue queue;
     private Map<String, String> parameters;
     private String socioeconomicLevel;
@@ -63,13 +67,13 @@ public class SingUpThreeFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
-        View view = inflater.inflate(R.layout.fragment_sing_up_three, container, false);
-        nationality = view.findViewById(R.id.nationality);
+        View view = inflater.inflate(R.layout.fragment_edit_user, container, false);
+        nationalities = view.findViewById(R.id.nationality);
         occupation = view.findViewById(R.id.occupation);
         low = view.findViewById(R.id.radioButtonLow);
         middle = view.findViewById(R.id.radioButtonMiddle);
         high = view.findViewById(R.id.radioButtonHigh);
-        registrar = view.findViewById(R.id.buttonRegistrar1);
+        record = view.findViewById(R.id.buttonRegistrar1);
         skipAndRecord = view.findViewById(R.id.buttonSkipAndRecord);
         queue = Volley.newRequestQueue(requireContext());
         parameters = new HashMap<>();
@@ -80,7 +84,7 @@ public class SingUpThreeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        registrar.setOnClickListener(v -> {
+        record.setOnClickListener(v -> {
             if (checkFilledFields()){
                 setOptionalParameters();
                 sendRequest();
@@ -90,10 +94,11 @@ public class SingUpThreeFragment extends Fragment {
     }
 
     private boolean checkFilledFields(){
-        if (nationality.getText().toString().isEmpty()){
-            nationality.setError("required field");
-            return false;
-        }
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(requireContext(), R.array.countries, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        nationalities.setAdapter(adapter);
+        nationalities.setOnItemSelectedListener(this);
+
         if (occupation.getText().toString().isEmpty()){
             occupation.setError("required field");
             return false;
@@ -118,7 +123,6 @@ public class SingUpThreeFragment extends Fragment {
     private void sendRequest(){
         setMandatoryParameters();
         CustomRequest request;
-        Toast.makeText(requireActivity(), parameters.toString(), duration).show();
         String url = "https://www.edacarquitectos.com/perceptorDeInseguridad/singup.php";
         request = new CustomRequest(method, url, parameters, this::response, this::errorResponse);
         queue.add(request);
@@ -141,7 +145,8 @@ public class SingUpThreeFragment extends Fragment {
             else{
                 storeUserData();
                 Toast.makeText(requireActivity(), userData.toString(), duration).show();
-                Navigation.findNavController(view).navigate(R.id.singUpThreeFrag_to_startLocFrag);
+                //TODO: set the navigation.
+                //Navigation.findNavController(view).navigate(R.id.singUpThreeFrag_to_startLocFrag);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -161,19 +166,20 @@ public class SingUpThreeFragment extends Fragment {
      * @see android.content.SharedPreferences.Editor
      */
     private void storeUserData(){
+        //TODO: set the real data to save.
         try {
             SharedPreferences user;
             user = requireActivity().getSharedPreferences("current_user", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = user.edit();
-            editor.putString("user_id", userData.getString("id_usuario"));
-            editor.putString("name", userData.getString("nombre"));
-            editor.putString("birth_date", userData.getString("fecha_nacimiento"));
-            editor.putString("age", userData.getString("edad"));
-            editor.putString("gender", userData.getString("genero"));
-            editor.putString("nationality", userData.getString("nacionalidad"));
+            editor.putString("pk_user", userData.getString("pk_user"));
+            editor.putString("name", userData.getString("name"));
+            editor.putString("date_birth", userData.getString("date_birth"));
+            editor.putString("age", userData.getString("age"));
+            editor.putString("gender", userData.getString("gender"));
+            editor.putString("nationality", userData.getString("nationality"));
             // Socioeconomic Level is abbreviated as se_level
-            editor.putString("se_level", userData.getString("nivel_socioeconomico"));
-            editor.putString("occupation", userData.getString("ocupacion"));
+            editor.putString("se_level", userData.getString("socioeconomic_level"));
+            editor.putString("occupation", userData.getString("occupation"));
             editor.apply();
         }  catch (JSONException e) {
             e.printStackTrace();
@@ -181,17 +187,26 @@ public class SingUpThreeFragment extends Fragment {
         }
     }
 
+    //TODO: set the real parameters for the request
     private void setMandatoryParameters(){
         parameters.put("nombre", requireArguments().getString("user"));
         parameters.put("contrasena", requireArguments().getString("password"));
-        parameters.put("genero", requireArguments().getString("genero"));
+        parameters.put("genero", requireArguments().getString("gender"));
         parameters.put("fecha_nacimiento", requireArguments().getString("fecha"));
         parameters.put("correo", requireArguments().getString("mail"));
     }
 
     private void setOptionalParameters() {
         parameters.put("nivel_socioeconomico", socioeconomicLevel);
-        parameters.put("nacionalidad", nationality.getText().toString());
+        parameters.put("nacionalidad", selectedCountry + "");
         parameters.put("ocupacion", occupation.getText().toString());
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        selectedCountry = i + 1;
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {}
 }

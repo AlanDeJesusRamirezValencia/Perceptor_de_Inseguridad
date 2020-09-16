@@ -34,6 +34,7 @@ public class UserFragment extends Fragment {
     private ImageButton goToStartLocation;
     private ImageButton goToMap;
     private Button logOut;
+    private Button goToEditUser;
 
     //Navigation bar animation components
 
@@ -47,6 +48,7 @@ public class UserFragment extends Fragment {
         goToStartLocation = view.findViewById(R.id.btn_goToStartLocFragFromUserFrag);
         goToMap = view.findViewById(R.id.btn_goToMapFromUser);
         logOut = view.findViewById(R.id.btn_logout);
+        goToEditUser = view.findViewById(R.id.btn_goToEditUser);
         user = requireActivity().getSharedPreferences("current_user", Context.MODE_PRIVATE);
         userID = view.findViewById(R.id.user_id_user);
         name = view.findViewById(R.id.user_username);
@@ -73,6 +75,8 @@ public class UserFragment extends Fragment {
                 v -> Navigation.findNavController(view).navigate(R.id.userFrag_to_startLocFrag));
         goToMap.setOnClickListener(
                 view1 -> Navigation.findNavController(view).navigate(R.id.userFrag_to_mapFrag));
+        goToEditUser.setOnClickListener(
+                view1 -> Navigation.findNavController(view).navigate(R.id.userFrag_to_editUserFrag));
         logOut.setOnClickListener(this::logOut);
     }
 

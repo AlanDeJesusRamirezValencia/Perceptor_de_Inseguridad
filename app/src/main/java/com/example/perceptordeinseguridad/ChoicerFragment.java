@@ -42,7 +42,7 @@ public class ChoicerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_choiser, container, false);
         SharedPreferences preferences = requireActivity().
                 getSharedPreferences("current_user", Context.MODE_PRIVATE);
-        userID = preferences.getString("user_id", "");
+        userID = preferences.getString("pk_user", "");
         return view;
     }
 

@@ -33,6 +33,9 @@
             app:destination="@id/startLocationFragment"
             app:popUpTo="@id/logInFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/logInFrag_to_forgotPwFrag"
+            app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/singUpFragment"
@@ -205,38 +208,12 @@
         <argument
             android:name="password"
             app:argType="string" />
-        <action
-            android:id="@+id/singUpTwoFrag_to_singUpThreeFrag"
-            app:destination="@id/singUpThreeFragment" />
         <argument
             android:name="mail"
             app:argType="string" />
-    </fragment>
-    <fragment
-        android:id="@+id/singUpThreeFragment"
-        android:name="com.example.perceptordeinseguridad.SingUpThreeFragment"
-        android:label="fragment_sing_up_three"
-        tools:layout="@layout/fragment_sing_up_three" >
-        <argument
-            android:name="user2"
-            app:argType="string" />
-        <argument
-            android:name="password2"
-            app:argType="string" />
-        <argument
-            android:name="gender"
-            app:argType="string" />
-        <argument
-            android:name="birthday"
-            app:argType="string" />
         <action
-            android:id="@+id/singUpThreeFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment"
-            app:popUpTo="@id/singUpThreeFragment"
-            app:popUpToInclusive="true" />
-        <argument
-            android:name="mail2"
-            app:argType="string" />
+            android:id="@+id/singUpTwoFrag_to_startLocFrag"
+            app:destination="@id/startLocationFragment" />
     </fragment>
     <dialog
         android:id="@+id/reportDialog"
@@ -266,6 +243,9 @@
         <action
             android:id="@+id/action_userFragment_to_hystoryFragment"
             app:destination="@id/hystoryFragment" />
+        <action
+            android:id="@+id/userFrag_to_editUserFrag"
+            app:destination="@id/editUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/hystoryFragment"
@@ -290,5 +270,19 @@
         <action
             android:id="@+id/mapFrag_to_userFrag"
             app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.example.perceptordeinseguridad.EditUserFragment"
+        android:label="fragment_edit_user"
+        tools:layout="@layout/fragment_edit_user" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.perceptordeinseguridad.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/forgotPwFrag_to_logInFrag"
+            app:destination="@id/logInFragment" />
     </fragment>
 </navigation>

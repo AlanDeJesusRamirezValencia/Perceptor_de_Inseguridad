@@ -118,15 +118,15 @@ public class SendingFragment extends Fragment {
         double latitude = Double.parseDouble(
                 Objects.requireNonNull(requireArguments().getString("latitude2")));
         Utm utm = new Utm(new double[]{longitude,latitude});
-        parameters.put("longitud", requireArguments().getString("longitude2"));
-        parameters.put("latitud", requireArguments().getString("latitude2"));
-        parameters.put("valor_inseguridad", requireArguments().getString("level3"));
+        parameters.put("longitude", requireArguments().getString("longitude2"));
+        parameters.put("latitude", requireArguments().getString("latitude2"));
+        parameters.put("insecurity_value", requireArguments().getString("level3"));
         parameters.put("y", utm.getY() + "");
         parameters.put("x", utm.getX() + "");
-        parameters.put("zona", utm.getZone() + "");
-        parameters.put("hemisferio", utm.getHemisphere() + "");
-        parameters.put("fk_usuario", user.getString("user_id", "1"));
-        parameters.put("contexto", requireArguments().getString("context2"));
-        parameters.put("tipo_peligro", requireArguments().getString("type"));
+        parameters.put("zone", utm.getZone() + "");
+        parameters.put("hemisphere", utm.getHemisphere() + "");
+        parameters.put("fk_user", user.getString("user_id", "1"));
+        parameters.put("context", requireArguments().getString("context2"));
+        parameters.put("description", requireArguments().getString("type"));
     }
 }

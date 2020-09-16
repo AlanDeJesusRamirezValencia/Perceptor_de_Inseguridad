@@ -54,6 +54,9 @@ public class LogInFragment extends Fragment {
     /** Password field */
     private EditText password;
 
+    /** Forgot Password */
+    private Button forgotPassword;
+
     /** On clicked, will start the {@link LogInFragment#logIn} method */
     private Button logger;
 
@@ -80,6 +83,7 @@ public class LogInFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_log_in, container, false);
         username = view.findViewById(R.id.editTextUserLogIn);
         password = view.findViewById(R.id.editTextPasswordLogIn);
+        forgotPassword = view.findViewById(R.id.buttonForgotPassword);
         logger = view.findViewById(R.id.buttonLogIn);
         singUp = view.findViewById(R.id.buttonGoToSingUp);
         parameters = new HashMap<>();
@@ -96,6 +100,8 @@ public class LogInFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        forgotPassword.setOnClickListener(
+                v -> Navigation.findNavController(v).navigate(R.id.logInFrag_to_forgotPwFrag));
         logger.setOnClickListener(v -> logIn());
         singUp.setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.logInFrag_to_singUpFrag));
@@ -111,8 +117,8 @@ public class LogInFragment extends Fragment {
      */
     private void logIn(){
         CustomRequest request;
-        parameters.put("nombre", username.getText().toString().trim());
-        parameters.put("contrasena", password.getText().toString());
+        parameters.put("name", username.getText().toString().trim());
+        parameters.put("password", password.getText().toString());
         String url = "https://www.edacarquitectos.com/perceptorDeInseguridad/login.php";
         request = new CustomRequest(method, url, parameters, this::response, this::errorResponse);
         queue.add(request);
@@ -121,9 +127,9 @@ public class LogInFragment extends Fragment {
     /** Successful connection and request submission. */
     private void response(@NonNull JSONObject response){
         try {
-            JSONArray arreglo = response.getJSONArray("datos");
-            userData = arreglo.getJSONObject(0);
-            if(userData.getString("id_usuario").equals("")) {
+            JSONArray array = response.getJSONArray("data");
+            userData = array.getJSONObject(0);
+            if(userData.getString("pk_user").equals("")) {
                 storeUserData();
                 Toast.makeText(requireActivity(), "incorrect data", duration).show();
             }
@@ -153,15 +159,18 @@ public class LogInFragment extends Fragment {
             SharedPreferences user;
             user = requireActivity().getSharedPreferences("current_user", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = user.edit();
-            editor.putString("user_id", userData.getString("id_usuario"));
-            editor.putString("name", userData.getString("nombre"));
-            editor.putString("birth_date", userData.getString("fecha_nacimiento"));
-            editor.putString("age", userData.getString("edad"));
-            editor.putString("gender", userData.getString("genero"));
-            editor.putString("nationality", userData.getString("nacionalidad"));
+            editor.putString("pk_user", userData.getString("pk_user"));
+            editor.putString("name", userData.getString("name"));
+            editor.putString("date_birth", userData.getString("date_birth"));
+            editor.putString("age", userData.getString("age"));
+            editor.putString("email", userData.getString("email"));
+            editor.putString("gender", userData.getString("gender"));
+            editor.putString("nationality", userData.getString("nationality"));
             // Socioeconomic Level is abbreviated as se_level
-            editor.putString("se_level", userData.getString("nivel_socioeconomico"));
-            editor.putString("occupation", userData.getString("ocupacion"));
+            editor.putString("se_level", userData.getString("socioeconomic_level"));
+            editor.putString("occupation", userData.getString("occupation"));
+            editor.putString("sexual_orientation", userData.getString("sexual_orientation"));
+            editor.putString("skin_color", userData.getString("skin_color"));
             editor.apply();
         }  catch (JSONException e) {
             e.printStackTrace();

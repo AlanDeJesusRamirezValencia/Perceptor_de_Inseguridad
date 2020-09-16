@@ -118,9 +118,8 @@ public class SingUpOneFragment extends Fragment {
      * Sends an HTTP request to check that name or email aren't already occupied.
      */
     private void checkUsername(){
-        parameters.put("nombre", name.getText().toString().trim());
-        parameters.put("correo", email.getText().toString().trim());
-        Toast.makeText(requireActivity(), parameters.toString(), SHORT).show();
+        parameters.put("name", name.getText().toString().trim());
+        parameters.put("email", email.getText().toString().trim());
         String url = "https://www.edacarquitectos.com/perceptorDeInseguridad/checkusername.php";
         StringRequest request = new StringRequest(method, url, this::response, this::errorResponse){
             @Override
@@ -131,7 +130,7 @@ public class SingUpOneFragment extends Fragment {
 
     /** Successful connection and request submission. */
     private void response(@NonNull String response){
-        if (response.trim().equals("libre")){
+        if (response.trim().equals("free")){
             Bundle args = new Bundle();
             args.putString("mail",email.getText().toString().trim());
             args.putString("user", name.getText().toString().trim());

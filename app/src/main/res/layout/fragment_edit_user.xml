@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SingUpThreeFragment"
+    tools:context=".EditUserFragment"
     android:orientation="vertical"
     android:background="@color/activityBackground">
 
@@ -18,21 +18,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/sing_up_title"
+            android:text="@string/edit_profile"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp" />
 
-            <EditText
+            <Spinner
                 android:id="@+id/nationality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:autofillHints="nationality"
                 android:hint="@string/nationality"
-                android:inputType="textNoSuggestions"
-                android:textColorHint="@color/colorSecondaryLight"
-                android:textColor="@color/colorSecondaryDark"
-                />
+                android:textColor="@color/colorSecondaryDark"/>
 
             <EditText
                 android:id="@+id/occupation"
@@ -100,7 +97,6 @@
                 android:text="@string/skip_and_create_new_account"
                 android:textColor="@color/colorSecondaryDark"
                 android:textSize="16sp" />
-
         </LinearLayout>
 
 </ScrollView>
