@@ -96,6 +96,16 @@ public class SingUpOneFragment extends Fragment {
             this.password.setError("Empty field");
             return false;
         }
+
+        if (!checkPasswordFormat(this.password.getText().toString())){
+            this.password.setError("Password must contain at least a Capital letter, a lowercase letter, a number and a special character");
+            return false;
+        }
+
+        if (this.password.getText().toString().length() < 8){
+            this.password.setError("Password must be at least 8 characters");
+            return false;
+        }
         return comparePasswords();
     }
 
@@ -112,6 +122,22 @@ public class SingUpOneFragment extends Fragment {
             return false;
         }
         return true;
+    }
+
+    private boolean checkPasswordFormat(@NonNull String password){
+        boolean number = false;
+        boolean capital = false;
+        boolean lowercase = false;
+        for (int i = 0; i <= password.length() -1; i ++){
+            if (Character.isDigit(password.charAt(i))) {
+                number = true;
+            } else if (Character.isUpperCase(password.charAt(i))) {
+                capital = true;
+            } else if (Character.isLowerCase(password.charAt(i))){
+                lowercase = true;
+            }
+        }
+        return number && capital && lowercase;
     }
 
     /**
