@@ -43,8 +43,8 @@ public class StartLocationFragment extends Fragment {
     private View view;
     private FusedLocationProviderClient provider;
     private LocationRequest request;
-    private String permission = Manifest.permission.ACCESS_FINE_LOCATION;
-    private LocationCallback callback = new LocationCallback(){
+    private final String permission = Manifest.permission.ACCESS_FINE_LOCATION;
+    private final LocationCallback callback = new LocationCallback(){
         @Override
         public void onLocationResult(LocationResult locationResult) {
             super.onLocationResult(locationResult);
@@ -115,8 +115,7 @@ public class StartLocationFragment extends Fragment {
                     Navigation.findNavController(view).navigate(R.id.startLocFrag_to_ActiveGPS));
         }
         else {
-            String p = permission;
-            ActivityCompat.requestPermissions(requireActivity(),new String[]{p},1);
+            ActivityCompat.requestPermissions(requireActivity(),new String[]{permission},1);
         }
     }
 

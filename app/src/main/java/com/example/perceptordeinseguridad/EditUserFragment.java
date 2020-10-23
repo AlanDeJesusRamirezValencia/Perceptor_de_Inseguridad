@@ -43,16 +43,12 @@ public class EditUserFragment extends Fragment implements AdapterView.OnItemSele
     /** Request method */
     final int method = Request.Method.POST;
 
-    /** Used to navigate to other fragments */
-    private View view;
-
     private Spinner nationalities;
     private int selectedCountry = 0;
     private EditText occupation;
     private RadioButton middle;
     private RadioButton low;
     private RadioButton high;
-    private Button skipAndRecord;
     private Button record;
     private RequestQueue queue;
     private Map<String, String> parameters;
@@ -74,10 +70,8 @@ public class EditUserFragment extends Fragment implements AdapterView.OnItemSele
         middle = view.findViewById(R.id.radioButtonMiddle);
         high = view.findViewById(R.id.radioButtonHigh);
         record = view.findViewById(R.id.buttonRegistrar1);
-        skipAndRecord = view.findViewById(R.id.buttonSkipAndRecord);
         queue = Volley.newRequestQueue(requireContext());
         parameters = new HashMap<>();
-        this.view = view;
         return view;
     }
 
@@ -90,7 +84,6 @@ public class EditUserFragment extends Fragment implements AdapterView.OnItemSele
                 sendRequest();
             }
         });
-        skipAndRecord.setOnClickListener(v -> sendRequest());
     }
 
     private boolean checkFilledFields(){

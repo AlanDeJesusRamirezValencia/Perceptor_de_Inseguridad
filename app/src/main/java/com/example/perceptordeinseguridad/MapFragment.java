@@ -46,7 +46,7 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class mapFragment extends Fragment implements OnMapReadyCallback {
+public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     private FusedLocationProviderClient provider;
     private MapView mapView;

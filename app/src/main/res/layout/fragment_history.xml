@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/history"
+            android:text="@string/empty_value"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp" />
     </LinearLayout>

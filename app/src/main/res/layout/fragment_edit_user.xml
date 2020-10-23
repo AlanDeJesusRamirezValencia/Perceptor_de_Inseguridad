@@ -86,17 +86,6 @@
                 android:fontFamily="@font/roboto_black"
                 android:text="@string/next"
                 android:textColor="@color/activityBackground" />
-
-            <Button
-                android:id="@+id/buttonSkipAndRecord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:background="@android:color/transparent"
-                android:padding="10dp"
-                android:text="@string/skip_and_create_new_account"
-                android:textColor="@color/colorSecondaryDark"
-                android:textSize="16sp" />
         </LinearLayout>
 
 </ScrollView>

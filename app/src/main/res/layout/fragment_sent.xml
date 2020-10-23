@@ -58,7 +58,7 @@
             android:background="@drawable/background_add_location"
             android:contentDescription="@string/report_title"
             android:text="@string/report"
-            android:textColor="@color/colorSecondary" />
+            android:textColor="@color/activityBackground" />
 
     </LinearLayout>
 
