@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/choiserFragment"
-        android:name="com.example.perceptordeinseguridad.ChoicerFragment"
+        android:name="com.example.perceptordeinseguridad.UI.ChoicerFragment"
         android:label="fragment_choiser"
         tools:layout="@layout/fragment_choiser" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.perceptordeinseguridad.LogInFragment"
+        android:name="com.example.perceptordeinseguridad.UI.LogInFragment"
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_log_in" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/singUpFragment"
-        android:name="com.example.perceptordeinseguridad.SingUpOneFragment"
+        android:name="com.example.perceptordeinseguridad.UI.SingUpOneFragment"
         android:label="fragment_sing_up"
         tools:layout="@layout/fragment_sing_up_one" >
         <action
@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/startLocationFragment"
-        android:name="com.example.perceptordeinseguridad.StartLocationFragment"
+        android:name="com.example.perceptordeinseguridad.UI.StartLocationFragment"
         android:label="fragment_start_location"
         tools:layout="@layout/fragment_start_location" >
         <action
@@ -74,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/levelFragment"
-        android:name="com.example.perceptordeinseguridad.LevelFragment"
+        android:name="com.example.perceptordeinseguridad.UI.LevelFragment"
         android:label="fragment_level"
         tools:layout="@layout/fragment_level" >
         <argument
@@ -96,12 +96,12 @@
     </fragment>
     <dialog
         android:id="@+id/askToActiveGPSDialog"
-        android:name="com.example.perceptordeinseguridad.AskToActiveGPSDialog"
+        android:name="com.example.perceptordeinseguridad.UI.AskToActiveGPSDialog"
         android:label="dialog_ask_to_active_gps"
         tools:layout="@layout/dialog_ask_to_active_gps" />
     <fragment
         android:id="@+id/contextFragment"
-        android:name="com.example.perceptordeinseguridad.ContextFragment"
+        android:name="com.example.perceptordeinseguridad.UI.ContextFragment"
         android:label="fragment_context"
         tools:layout="@layout/fragment_context" >
         <argument
@@ -126,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/typeFragment"
-        android:name="com.example.perceptordeinseguridad.TypeFragment"
+        android:name="com.example.perceptordeinseguridad.UI.TypeFragment"
         android:label="fragment_type"
         tools:layout="@layout/fragment_type" >
         <argument
@@ -154,7 +154,7 @@
     </fragment>
     <fragment
         android:id="@+id/sendingFragment"
-        android:name="com.example.perceptordeinseguridad.SendingFragment"
+        android:name="com.example.perceptordeinseguridad.UI.SendingFragment"
         android:label="fragment_sending"
         tools:layout="@layout/fragment_sending" >
         <argument
@@ -182,7 +182,7 @@
     </fragment>
     <fragment
         android:id="@+id/sentFragment"
-        android:name="com.example.perceptordeinseguridad.SentFragment"
+        android:name="com.example.perceptordeinseguridad.UI.SentFragment"
         android:label="fragment_sent"
         tools:layout="@layout/fragment_sent" >
         <argument
@@ -199,7 +199,7 @@
     </fragment>
     <fragment
         android:id="@+id/singUpTwoFragment"
-        android:name="com.example.perceptordeinseguridad.SingUpTwoFragment"
+        android:name="com.example.perceptordeinseguridad.UI.SingUpTwoFragment"
         android:label="fragment_sing_up_two"
         tools:layout="@layout/fragment_sing_up_two" >
         <argument
@@ -217,7 +217,7 @@
     </fragment>
     <dialog
         android:id="@+id/reportDialog"
-        android:name="com.example.perceptordeinseguridad.ReportDialog"
+        android:name="com.example.perceptordeinseguridad.UI.ReportDialog"
         android:label="dialog_report"
         tools:layout="@layout/dialog_report" >
         <argument
@@ -226,7 +226,7 @@
     </dialog>
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.example.perceptordeinseguridad.UserFragment"
+        android:name="com.example.perceptordeinseguridad.UI.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <action
@@ -249,7 +249,7 @@
     </fragment>
     <fragment
         android:id="@+id/hystoryFragment"
-        android:name="com.example.perceptordeinseguridad.HistoryFragment"
+        android:name="com.example.perceptordeinseguridad.UI.HistoryFragment"
         android:label="fragment_hystory"
         tools:layout="@layout/fragment_history" >
         <action
@@ -261,7 +261,7 @@
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
-        android:name="com.example.perceptordeinseguridad.MapFragment"
+        android:name="com.example.perceptordeinseguridad.UI.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" >
         <action
@@ -273,12 +273,12 @@
     </fragment>
     <fragment
         android:id="@+id/editUserFragment"
-        android:name="com.example.perceptordeinseguridad.EditUserFragment"
+        android:name="com.example.perceptordeinseguridad.UI.EditUserFragment"
         android:label="fragment_edit_user"
         tools:layout="@layout/fragment_edit_user" />
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.perceptordeinseguridad.ForgotPasswordFragment"
+        android:name="com.example.perceptordeinseguridad.UI.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" >
         <action

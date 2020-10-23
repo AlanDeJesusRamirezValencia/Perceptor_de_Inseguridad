@@ -1,4 +1,4 @@
-package com.example.perceptordeinseguridad;
+package com.example.perceptordeinseguridad.UI;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -13,6 +13,8 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.perceptordeinseguridad.R;
 
 /**
  * A {@link Fragment} subclass.

@@ -1,4 +1,4 @@
-package com.example.perceptordeinseguridad;
+package com.example.perceptordeinseguridad.UI;
 
 import android.os.Bundle;
 
@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.perceptordeinseguridad.R;
 
 /**
  * A {@link DialogFragment} subclass.

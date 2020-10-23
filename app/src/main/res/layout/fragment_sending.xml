@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".SendingFragment"
+    tools:context=".UI.SendingFragment"
     android:background="@color/activityBackground">
 
     <TextView

@@ -1,8 +1,10 @@
-package com.example.perceptordeinseguridad;
+package com.example.perceptordeinseguridad.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+
+import com.example.perceptordeinseguridad.R;
 
 /**
  * App Main activity.

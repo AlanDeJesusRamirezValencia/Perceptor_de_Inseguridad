@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity"
+    tools:context=".UI.DashboardActivity"
     android:background="@color/activityBackground">
 
     <androidx.fragment.app.FragmentContainerView

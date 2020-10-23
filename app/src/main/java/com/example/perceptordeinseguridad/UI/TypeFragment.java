@@ -1,4 +1,4 @@
-package com.example.perceptordeinseguridad;
+package com.example.perceptordeinseguridad.UI;
 
 import android.os.Bundle;
 
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.example.perceptordeinseguridad.R;
 
 /**
  * A simple {@link Fragment} subclass.

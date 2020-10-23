@@ -1,4 +1,4 @@
-package com.example.perceptordeinseguridad;
+package com.example.perceptordeinseguridad.UI;
 
 import android.Manifest;
 import android.content.Context;
@@ -26,6 +26,8 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
+import com.example.perceptordeinseguridad.CustomRequest;
+import com.example.perceptordeinseguridad.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;

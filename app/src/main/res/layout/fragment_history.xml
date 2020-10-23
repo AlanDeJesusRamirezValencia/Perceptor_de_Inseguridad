@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/activityBackground"
     android:orientation="vertical"
-    tools:context=".HistoryFragment">
+    tools:context=".UI.HistoryFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"

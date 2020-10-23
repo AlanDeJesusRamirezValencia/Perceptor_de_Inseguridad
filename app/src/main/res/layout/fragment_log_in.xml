@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
-    tools:context=".LogInFragment">
+    tools:context=".UI.LogInFragment">
 
         <ImageView
             android:id="@+id/imageView"

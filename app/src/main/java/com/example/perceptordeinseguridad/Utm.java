@@ -12,11 +12,11 @@ import org.jetbrains.annotations.NotNull;
  * @author AngelDanielLopezVazquez
  * @version 1.0
  */
-class Utm {
+public class Utm {
 
     private double[] coordinatesUMT;
-    private double zone;
-    private int hemisphere;
+    private final double zone;
+    private final int hemisphere;
 
     /**
      * Major axis of ellipsoid model
@@ -47,7 +47,7 @@ class Utm {
      * @param geographicalCoordinates  coordinates assigned from an array of double values,
      *                                 where the value [0] corresponds to the longitude and [1] to the latitude.
      */
-    Utm(@NotNull double[] geographicalCoordinates){
+    public Utm(@NotNull double[] geographicalCoordinates){
         coordinatesUMT = new double[2];
         this.zone = (int) Math.floor(LatLonToXY(DegToRad(geographicalCoordinates[1]),
                 DegToRad(geographicalCoordinates[0]),
@@ -58,28 +58,28 @@ class Utm {
     /**
      * @return X    The longitude represented in meters
      */
-    double getX(){
+    public double getX(){
         return this.coordinatesUMT[0];
     }
 
     /**
      * @return Y    The longitude represented in meters
      */
-    double getY(){
+    public double getY(){
         return this.coordinatesUMT[1];
     }
 
     /**
      * @return hemisphere
      */
-    int getHemisphere(){
+    public int getHemisphere(){
         return this.hemisphere;
     }
 
     /**
      * @return Zone
      */
-    double getZone(){
+    public double getZone(){
         return this.zone;
     }
 

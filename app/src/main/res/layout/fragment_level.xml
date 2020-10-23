@@ -6,7 +6,7 @@
     android:background="@color/activityBackground"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".LevelFragment">
+    tools:context=".UI.LevelFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
