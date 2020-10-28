@@ -65,12 +65,18 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-
+            <View
+                android:id="@+id/map_focus"
+                android:layout_width="105dp"
+                android:layout_height="45dp"
+                android:background="@drawable/container3"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="140dp"/>
             <View
                 android:id="@+id/map_float_view"
                 android:layout_width="57.5dp"
                 android:layout_height="57.5dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="-67.5dp"
                 android:layout_marginStart="140dp"
                 android:background="@drawable/background_add_location" />
         </androidx.appcompat.widget.LinearLayoutCompat>

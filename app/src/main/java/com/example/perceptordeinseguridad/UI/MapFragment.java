@@ -50,7 +50,6 @@ import java.util.Map;
  */
 public class MapFragment extends Fragment implements OnMapReadyCallback {
 
-    private FusedLocationProviderClient provider;
     private MapView mapView;
     private ImageButton goToStartLocation;
     private ImageButton goToUser;
@@ -58,16 +57,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     //Animated components
     private View floatView;
     private ImageButton floatImage;
-
-    //request components
-    final int duration = Toast.LENGTH_SHORT;
-    final int method = Request.Method.POST;
-
-
-    @Override
-    public void onCreate(Bundle savedInstance) {
-        super.onCreate(savedInstance);
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstance) {
@@ -77,14 +66,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         goToUser = v.findViewById(R.id.btn_goToUserFromMapFrag);
         mapView.onCreate(savedInstance);
         mapView.getMapAsync(this);
-        provider = LocationServices.getFusedLocationProviderClient(requireActivity());
-
         floatView = v.findViewById(R.id.map_float_view);
         floatImage = v.findViewById(R.id.map_float_image);
 
         floatButtonAnimation();
-
-
         return v;
     }
 
@@ -95,42 +80,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         goToUser.setOnClickListener( v -> Navigation.findNavController(v).navigate(R.id.mapFrag_to_userFrag));
     }
 
-    /** Failed connection */
-    private void errorResponse(VolleyError error){
-        Toast.makeText(requireActivity(), "Disconnected", duration).show();
-    }
-
     @Override
     public void onMapReady(@NonNull GoogleMap map) {
-        //map.setMinZoomPreference(13);
+        map.setMinZoomPreference(13);
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        int granted = PackageManager.PERMISSION_GRANTED;
-        String permission = Manifest.permission.ACCESS_FINE_LOCATION;
-        if (ContextCompat.checkSelfPermission(requireContext(), permission) == granted) {
-            map.setMyLocationEnabled(true);
-            Task<Location> locationTask = provider.getLastLocation();
-            locationTask.addOnSuccessListener(loc -> map.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(loc.getLatitude(), loc.getLongitude()), 12)));
-        } else {
-            ActivityCompat.requestPermissions(requireActivity(),new String[]{permission},1);
-        }
-        RequestQueue queue = Volley.newRequestQueue(requireContext());
-        Map<String, String> parameters = new HashMap<>();
-        SharedPreferences userData = requireActivity().getSharedPreferences("current_user", Context.MODE_PRIVATE);
-        parameters.put("id", userData.getString("user_id", ""));
-        String url = "https://www.edacarquitectos.com/appBotonDePanico/PerceptionsHistory.php?id_usuario=3";
-        CustomRequest request = new CustomRequest(method, url, parameters, response -> {
-            try {
-                JSONArray dataMarkers = response.getJSONArray("datos");
-                for (int i=0; i<dataMarkers.length(); i++) {
-                    JSONObject data = dataMarkers.getJSONObject(i);
-                    map.addMarker(new MarkerOptions().position(new LatLng(Integer.parseInt(data.getString("latitud")), Integer.parseInt(data.getString("longitud")))).title(data.getString("tipo_peligro")));
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-                Toast.makeText(requireActivity(), "Incompatible values", duration).show();
-            }
-        }, this::errorResponse);
-        queue.add(request);
     }
 
     private void floatButtonAnimation(){
