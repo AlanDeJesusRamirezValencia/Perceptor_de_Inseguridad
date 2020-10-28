@@ -20,7 +20,7 @@ import com.example.perceptordeinseguridad.R;
  * A new perception of insecurity has been sent.
  *
  * This fragment show that the new perception of insecurity has been sent.
- * Lets return fragment {@link StartLocationFragment}
+ * Lets return fragment {@link AddPerceptionFragment}
  * or see the report of the perception.
  */
 public class SentFragment extends Fragment {
@@ -28,7 +28,7 @@ public class SentFragment extends Fragment {
     /** On clicked, show {@link ReportDialog}*/
     private Button report;
 
-    /** On clicked, app navigates to {@link StartLocationFragment}*/
+    /** On clicked, app navigates to {@link AddPerceptionFragment}*/
     private ImageButton close;
 
 

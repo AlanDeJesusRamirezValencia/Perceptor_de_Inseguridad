@@ -113,7 +113,7 @@ public class LogInFragment extends Fragment {
      * Creates a {@link StringRequest} object and add it to {@link LogInFragment#queue}
      * If the request is successful, calls the {@link #response(JSONObject)} method.
      * else, calls the {@link LogInFragment#errorResponse(VolleyError)} method.
-     * and app navigates to {@link StartLocationFragment}.
+     * and app navigates to {@link AddPerceptionFragment}.
      *
      * @see StringRequest
      */

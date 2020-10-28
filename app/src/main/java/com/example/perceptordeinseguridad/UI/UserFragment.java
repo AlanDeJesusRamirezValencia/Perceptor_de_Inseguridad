@@ -12,18 +12,17 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.perceptordeinseguridad.MenuAnimations;
 import com.example.perceptordeinseguridad.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UserFragment extends Fragment {
+public class UserFragment extends Fragment implements MenuAnimations {
     private SharedPreferences user;
     private TextView userID;
     private TextView name;
@@ -37,12 +36,6 @@ public class UserFragment extends Fragment {
     private ImageButton goToMap;
     private Button logOut;
     private Button goToEditUser;
-
-    //Navigation bar animation components
-
-    private View focus;
-    private View floatView;
-    private ImageButton floatImage;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
@@ -60,12 +53,12 @@ public class UserFragment extends Fragment {
         nationality = view.findViewById(R.id.user_nationality);
         socioeconomicLevel = view.findViewById(R.id.user_socioeconomicLevel);
         occupation = view.findViewById(R.id.user_occupation);
-        focus = view.findViewById(R.id.user_focus);
-        floatView = view.findViewById(R.id.user_float_button);
-        floatImage = view.findViewById(R.id.user_float_image);
-
         //Animations
-        floatButtonAnimation();
+        floatButtonAnimations(
+                view.findViewById(R.id.user_focus),
+                view.findViewById(R.id.user_float_button),
+                view.findViewById(R.id.user_float_image),
+                requireContext());
         return view;
     }
 
@@ -97,19 +90,5 @@ public class UserFragment extends Fragment {
         nationality.setText(user.getString("nationality",""));
         socioeconomicLevel.setText(user.getString("se_level",""));
         occupation.setText(user.getString("occupation", ""));
-    }
-
-
-    private void floatButtonAnimation(){
-        Animation animFloatButton;
-        animFloatButton = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_view);
-        Animation animFloatImage;
-        animFloatImage = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_image);
-        Animation focusAnimation;
-        focusAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.focus_initial);
-        floatView.startAnimation(animFloatButton);
-        floatImage.startAnimation(animFloatImage);
-        floatImage.setVisibility(View.VISIBLE);
-        focus.startAnimation(focusAnimation);
     }
 }

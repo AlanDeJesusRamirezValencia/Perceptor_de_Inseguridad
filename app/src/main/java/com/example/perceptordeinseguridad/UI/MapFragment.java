@@ -1,75 +1,57 @@
 package com.example.perceptordeinseguridad.UI;
 
-import android.Manifest;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.location.Location;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.Volley;
-import com.example.perceptordeinseguridad.CustomRequest;
+import com.example.perceptordeinseguridad.LocationFragment;
+import com.example.perceptordeinseguridad.MenuAnimations;
 import com.example.perceptordeinseguridad.R;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.Task;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MapFragment extends Fragment implements OnMapReadyCallback {
+public class MapFragment extends LocationFragment implements OnMapReadyCallback, MenuAnimations {
 
     private MapView mapView;
+    private GoogleMap map;
     private ImageButton goToStartLocation;
     private ImageButton goToUser;
 
     //Animated components
-    private View floatView;
-    private ImageButton floatImage;
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstance) {
+        initLocationComponents();
         View v = inflater.inflate(R.layout.fragment_map, container, false);
         mapView = v.findViewById(R.id.mapView);
         goToStartLocation = v.findViewById(R.id.btn_goToStartLocFragFromMapFrag);
         goToUser = v.findViewById(R.id.btn_goToUserFromMapFrag);
         mapView.onCreate(savedInstance);
         mapView.getMapAsync(this);
-        floatView = v.findViewById(R.id.map_float_view);
-        floatImage = v.findViewById(R.id.map_float_image);
-
-        floatButtonAnimation();
+        checkPermissionsAndGetLastLocation();
+        //animations
+        floatButtonAnimations(
+                v.findViewById(R.id.map_focus),
+                v.findViewById(R.id.map_float_view),
+                v.findViewById(R.id.map_float_image),
+                requireContext()
+        );
         return v;
     }
 
@@ -82,15 +64,36 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(@NonNull GoogleMap map) {
-        map.setMinZoomPreference(13);
-        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-    }
-
-    private void floatButtonAnimation(){
-        Animation animFloatButton = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_view);
-        Animation animFloatImage = AnimationUtils.loadAnimation(requireContext(), R.anim.show_float_image);
-        floatView.startAnimation(animFloatButton);
-        floatImage.startAnimation(animFloatImage);
+        this.map = map;
+        this.map.setMinZoomPreference(16);
+        this.map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        LatLng ll1 = new LatLng(18.142708, -94.476217);
+        this.map.addMarker(new MarkerOptions().position(ll1)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_one)));
+        LatLng ll2 = new LatLng(18.145145, -94.472462);
+        this.map.addMarker(new MarkerOptions().position(ll2)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_one)));
+        LatLng ll3 = new LatLng(18.141230, -94.474876);
+        this.map.addMarker(new MarkerOptions().position(ll3)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_four)));
+        LatLng ll4 = new LatLng(18.140985, -94.476807);
+        this.map.addMarker(new MarkerOptions().position(ll4)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_one)));
+        LatLng ll5 = new LatLng(18.143146, -94.477934);
+        this.map.addMarker(new MarkerOptions().position(ll5)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_four)));
+        LatLng ll6 = new LatLng(18.142636, -94.473728);
+        this.map.addMarker(new MarkerOptions().position(ll6)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_one)));
+        LatLng ll7 = new LatLng(18.146875, -94.474540);
+        this.map.addMarker(new MarkerOptions().position(ll7)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_one)));
+        LatLng ll8 = new LatLng(18.144642, -94.478724);
+        this.map.addMarker(new MarkerOptions().position(ll8)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_one)));
+        LatLng ll9 = new LatLng(18.141007, -94.478445);
+        this.map.addMarker( new MarkerOptions().position(ll9)
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_four)));
     }
 
     @Override
@@ -103,6 +106,17 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     public void onResume() {
         super.onResume();
         mapView.onResume();
+    }
+
+    @Override
+    protected void onLocationObtained(double lat, double lon) {
+        LatLng myPosition = new LatLng(18.143023, -94.475691);
+        map.moveCamera(CameraUpdateFactory.newLatLng(myPosition));
+    }
+
+    @Override
+    protected void onGPSDisabled() {
+
     }
 
     @Override

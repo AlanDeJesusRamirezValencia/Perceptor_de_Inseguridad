@@ -16,7 +16,7 @@
             app:popUpToInclusive="false" />
         <action
             android:id="@+id/choiserFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment"
+            app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/choiserFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -30,7 +30,7 @@
             app:destination="@id/singUpFragment" />
         <action
             android:id="@+id/logInFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment"
+            app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/logInFragment"
             app:popUpToInclusive="true" />
         <action
@@ -47,10 +47,10 @@
             app:destination="@id/singUpTwoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/startLocationFragment"
-        android:name="com.example.perceptordeinseguridad.UI.StartLocationFragment"
-        android:label="fragment_start_location"
-        tools:layout="@layout/fragment_start_location" >
+        android:id="@+id/addPerceptionFragment"
+        android:name="com.example.perceptordeinseguridad.UI.AddPerceptionFragment"
+        android:label="fragment_add_location"
+        tools:layout="@layout/fragment_start_location">
         <action
             android:id="@+id/startLocFrag_to_ActiveGPS"
             app:destination="@id/askToActiveGPSDialog" />
@@ -90,7 +90,7 @@
             app:exitAnim="@anim/exit_anim_slide" />
         <action
             android:id="@+id/levelFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment"
+            app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/levelFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -120,7 +120,7 @@
             app:exitAnim="@anim/exit_anim_slide" />
         <action
             android:id="@+id/contextFrag_to_startLocationFrag"
-            app:destination="@id/startLocationFragment"
+            app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/contextFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -148,7 +148,7 @@
             app:exitAnim="@anim/exit_anim_fade_out" />
         <action
             android:id="@+id/typeFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment"
+            app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/typeFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -177,7 +177,7 @@
             app:destination="@id/sentFragment"
             app:enterAnim="@anim/enter_anim_fade_in"
             app:exitAnim="@anim/exit_anim_fade_out"
-            app:popUpTo="@id/startLocationFragment"
+            app:popUpTo="@id/addPerceptionFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -190,7 +190,7 @@
             app:argType="string" />
         <action
             android:id="@+id/sentFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment"
+            app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/sentFragment"
             app:popUpToInclusive="true" />
         <action
@@ -213,7 +213,7 @@
             app:argType="string" />
         <action
             android:id="@+id/singUpTwoFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment" />
+            app:destination="@id/addPerceptionFragment" />
     </fragment>
     <dialog
         android:id="@+id/reportDialog"
@@ -231,7 +231,7 @@
         tools:layout="@layout/fragment_user" >
         <action
             android:id="@+id/userFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment"
+            app:destination="@id/addPerceptionFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/userFrag_to_choiserFrag"
@@ -266,7 +266,7 @@
         tools:layout="@layout/fragment_map" >
         <action
             android:id="@+id/mapFrag_to_startLocFrag"
-            app:destination="@id/startLocationFragment" />
+            app:destination="@id/addPerceptionFragment" />
         <action
             android:id="@+id/mapFrag_to_userFrag"
             app:destination="@id/userFragment" />

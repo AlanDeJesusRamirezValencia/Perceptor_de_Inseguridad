@@ -21,7 +21,7 @@ import com.example.perceptordeinseguridad.R;
  *
  * This is the start destination of the navigation XML file.
  * It serves to identify the current user of the application.
- * If there is a current user, the app navigates to {@link StartLocationFragment}.
+ * If there is a current user, the app navigates to {@link AddPerceptionFragment}.
  * If there isn't, the app navigates to {@link LogInFragment}.
  *
  * @author Alan de Jesús Ramirez Valencia.
@@ -52,7 +52,7 @@ public class ChoicerFragment extends Fragment {
      * The {@link DialogFragment#onViewCreated} overwritten method.
      *
      * If the {@link ChoicerFragment#userID} field is not empty,
-     * the app navigates to {@link StartLocationFragment}.
+     * the app navigates to {@link AddPerceptionFragment}.
      * If is it, the app navigates to {@link LogInFragment}.
      */
     @Override

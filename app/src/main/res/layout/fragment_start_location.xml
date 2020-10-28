@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/activityBackground"
     android:orientation="vertical"
-    tools:context=".UI.StartLocationFragment">
+    tools:context=".UI.AddPerceptionFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"

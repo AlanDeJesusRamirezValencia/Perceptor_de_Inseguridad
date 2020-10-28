@@ -25,7 +25,7 @@ import com.example.perceptordeinseguridad.R;
  */
 public class LevelFragment extends Fragment implements View.OnClickListener {
 
-    /** Button to close the current fragment and back to {@link StartLocationFragment}*/
+    /** Button to close the current fragment and back to {@link AddPerceptionFragment}*/
     private ImageButton close;
 
     /** Button describing a very low level of insecurity */
@@ -44,7 +44,7 @@ public class LevelFragment extends Fragment implements View.OnClickListener {
     private Button level5;
 
     /**
-     * Bundle sent from {@link StartLocationFragment}.
+     * Bundle sent from {@link AddPerceptionFragment}.
      *
      * This Bundle must contain the following data.
      * - Latitude abbreviated as "lat"
