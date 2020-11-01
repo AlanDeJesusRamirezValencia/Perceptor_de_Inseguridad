@@ -24,7 +24,7 @@
     <string name="at_local_work">Local\nwork</string>
     <string name="at_home">At home</string>
 
-    <!-- Perception Report-->
+    <!-- PerceptionEntity Report-->
     <string name="report_title">Report of perception</string>
     <string name="report">Report</string>
     <string name="value_insecurity">Insecurity value</string>
@@ -82,7 +82,7 @@
     <string name="edit_profile">Edit Profile</string>
 
     <!--Types of Danger-->
-    <string name="type_of_danger">Type de danger</string>
+    <string name="type_of_danger">Type of danger</string>
     <string name="suspect">Suspect</string>
     <string name="less_serious">Less serious</string>
     <string name="something_serious">Something serious</string>
