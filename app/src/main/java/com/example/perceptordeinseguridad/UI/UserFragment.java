@@ -33,6 +33,7 @@ public class UserFragment extends Fragment implements MenuAnimations {
     private TextView socioeconomicLevel;
     private TextView occupation;
     private ImageButton goToStartLocation;
+    private ImageButton goToHistory;
     private ImageButton goToMap;
     private Button logOut;
     private Button goToEditUser;
@@ -40,7 +41,8 @@ public class UserFragment extends Fragment implements MenuAnimations {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         View view = inflater.inflate(R.layout.fragment_user, container, false);
-        goToStartLocation = view.findViewById(R.id.btn_goToStartLocFragFromUserFrag);
+        goToStartLocation = view.findViewById(R.id.btn_goToAddPerFragFromUserFrag);
+        goToHistory = view.findViewById(R.id.btn_goToHistoryFragFromUserFrag);
         goToMap = view.findViewById(R.id.btn_goToMapFromUser);
         logOut = view.findViewById(R.id.btn_logout);
         goToEditUser = view.findViewById(R.id.btn_goToEditUser);
@@ -67,7 +69,9 @@ public class UserFragment extends Fragment implements MenuAnimations {
         super.onViewCreated(view, savedInstanceState);
         showDataOnScreen();
         goToStartLocation.setOnClickListener(
-                v -> Navigation.findNavController(view).navigate(R.id.userFrag_to_startLocFrag));
+                v -> Navigation.findNavController(view).navigate(R.id.userFrag_to_addPerFrag));
+        goToHistory.setOnClickListener(v ->
+                Navigation.findNavController(view).navigate(R.id.userFrag_to_historyFrag));
         goToMap.setOnClickListener(
                 view1 -> Navigation.findNavController(view).navigate(R.id.userFrag_to_mapFrag));
         goToEditUser.setOnClickListener(

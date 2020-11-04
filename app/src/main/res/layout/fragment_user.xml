@@ -190,7 +190,7 @@
                 android:layout_marginTop="5dp"
                 android:contentDescription="@string/go_to_settings"/>
             <ImageButton
-                android:id="@+id/btn_goToStartLocFragFromUserFrag"
+                android:id="@+id/btn_goToAddPerFragFromUserFrag"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"
@@ -198,14 +198,16 @@
                 android:background="#00FFFFFF"
                 android:layout_marginTop="5dp"
                 android:contentDescription="@string/go_to_start_location"/>
+
             <ImageButton
+                android:id="@+id/btn_goToHistoryFragFromUserFrag"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/history"
-                android:background="#00FFFFFF"
-                android:layout_marginEnd="0dp"
                 android:layout_marginTop="5dp"
-                android:contentDescription="@string/go_to_history"/>
+                android:layout_marginEnd="0dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/go_to_history"
+                android:src="@drawable/history" />
             <View
                 android:layout_width="15dp"
                 android:layout_height="15dp"

@@ -108,7 +108,7 @@ public class ContextFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         close.setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.contextFrag_to_startLocationFrag));
+                Navigation.findNavController(v).navigate(R.id.contextFrag_to_addPerFrag));
         privateTransport.setOnClickListener(this);
         publicTransport.setOnClickListener(this);
         atLocalWork.setOnClickListener(this);

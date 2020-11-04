@@ -32,6 +32,7 @@ public class MapFragment extends LocationFragment implements OnMapReadyCallback,
     private MapView mapView;
     private GoogleMap map;
     private ImageButton goToStartLocation;
+    private ImageButton goToHistory;
     private ImageButton goToUser;
 
     //Animated components
@@ -40,7 +41,8 @@ public class MapFragment extends LocationFragment implements OnMapReadyCallback,
         initLocationComponents();
         View v = inflater.inflate(R.layout.fragment_map, container, false);
         mapView = v.findViewById(R.id.mapView);
-        goToStartLocation = v.findViewById(R.id.btn_goToStartLocFragFromMapFrag);
+        goToStartLocation = v.findViewById(R.id.btn_goToAddPerFragFromMapFrag);
+        goToHistory = v.findViewById(R.id.btn_goToHistoryFragFromMapFrag);
         goToUser = v.findViewById(R.id.btn_goToUserFromMapFrag);
         mapView.onCreate(savedInstance);
         mapView.getMapAsync(this);
@@ -59,6 +61,7 @@ public class MapFragment extends LocationFragment implements OnMapReadyCallback,
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         goToStartLocation.setOnClickListener( v -> Navigation.findNavController(v).navigate(R.id.mapFrag_to_startLocFrag));
+        goToHistory.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.mapFrag_to_historyFrag));
         goToUser.setOnClickListener( v -> Navigation.findNavController(v).navigate(R.id.mapFrag_to_userFrag));
     }
 

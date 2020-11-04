@@ -13,12 +13,12 @@ import java.util.List;
 
 public class InsecurityPerceiverRepository {
     private final PerceptionDao dao;
-    private final LiveData<List<PerceptionEntity>> allPerceptions;
+    private LiveData<List<PerceptionEntity>> allPerceptions;
 
     public InsecurityPerceiverRepository(Application application){
         InsecurityPerceiverRoomDatabase db = InsecurityPerceiverRoomDatabase.getDatabase(application);
         dao = db.perceptionDao();
-        allPerceptions = dao.getAll();
+        //allPerceptions = dao.getAll();
     }
 
     public LiveData<List<PerceptionEntity>> getAll() { return allPerceptions; }

@@ -102,7 +102,7 @@ public class SingUpTwoFragment extends Fragment {
             userData = array.getJSONObject(0);
             if(!userData.getString("pk_user").equals("")){
                 storeUserData();
-                Navigation.findNavController(view).navigate(R.id.singUpTwoFrag_to_startLocFrag);
+                Navigation.findNavController(view).navigate(R.id.singUpTwoFrag_to_addPerFrag);
             }
             else Toast.makeText(requireContext(), "Error. Try later.", Toast.LENGTH_SHORT).show();
         } catch (JSONException e) {

@@ -49,7 +49,7 @@ public class TypeFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         close.setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.typeFrag_to_startLocFrag));
+                Navigation.findNavController(v).navigate(R.id.typeFrag_to_addPerFrag));
 
         druggedDrunkPeople.setOnClickListener(this);
         harassment.setOnClickListener(this);

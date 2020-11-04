@@ -101,7 +101,7 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/btn_goToUserFromStartLoc"
+                android:id="@+id/btn_goToUserFromAddPer"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
@@ -118,7 +118,7 @@
                 android:layout_marginTop="5dp"
                 android:contentDescription="@string/go_to_settings"/>
             <ImageButton
-                android:id="@+id/start_loc_float_image"
+                android:id="@+id/add_per_float_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"
@@ -126,14 +126,16 @@
                 android:background="#00FFFFFF"
                 android:layout_marginTop="-20dp"
                 android:contentDescription="@string/go_to_start_location"/>
+
             <ImageButton
+                android:id="@+id/btn_goToHistoryFromAddPer"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/history"
-                android:background="#00FFFFFF"
-                android:layout_marginEnd="0dp"
                 android:layout_marginTop="5dp"
-                android:contentDescription="@string/go_to_history"/>
+                android:layout_marginEnd="0dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/go_to_history"
+                android:src="@drawable/history" />
             <View
                 android:layout_width="15dp"
                 android:layout_height="15dp"
@@ -143,7 +145,7 @@
                 android:layout_marginTop="-7.5dp"
                 android:contentDescription="@string/intern_notification"/>
             <ImageButton
-                android:id="@+id/btn_goToMapFromStartLoc"
+                android:id="@+id/btn_goToMapFromAddPer"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/nav_map"

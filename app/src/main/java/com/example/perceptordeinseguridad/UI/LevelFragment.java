@@ -82,7 +82,7 @@ public class LevelFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         close.setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.levelFrag_to_startLocFrag));
+                Navigation.findNavController(v).navigate(R.id.levelFrag_to_addPerFrag));
         level1.setOnClickListener(this);
         level2.setOnClickListener(this);
         level3.setOnClickListener(this);

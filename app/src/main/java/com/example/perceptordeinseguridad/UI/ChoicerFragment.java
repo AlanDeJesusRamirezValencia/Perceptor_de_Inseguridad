@@ -61,6 +61,6 @@ public class ChoicerFragment extends Fragment {
         if (userID.equals(""))
             Navigation.findNavController(view).navigate(R.id.choiserFrag_to_logInFrag);
         else
-            Navigation.findNavController(view).navigate(R.id.choiserFrag_to_startLocFrag);
+            Navigation.findNavController(view).navigate(R.id.choiserFrag_to_addPerFrag);
     }
 }

@@ -15,7 +15,7 @@
             app:destination="@id/logInFragment"
             app:popUpToInclusive="false" />
         <action
-            android:id="@+id/choiserFrag_to_startLocFrag"
+            android:id="@+id/choiserFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/choiserFragment"
             app:popUpToInclusive="true" />
@@ -29,7 +29,7 @@
             android:id="@+id/logInFrag_to_singUpFrag"
             app:destination="@id/singUpFragment" />
         <action
-            android:id="@+id/logInFrag_to_startLocFrag"
+            android:id="@+id/logInFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/logInFragment"
             app:popUpToInclusive="true" />
@@ -49,13 +49,13 @@
     <fragment
         android:id="@+id/addPerceptionFragment"
         android:name="com.example.perceptordeinseguridad.UI.AddPerceptionFragment"
-        android:label="fragment_add_location"
+        android:label="fragment_add_perception"
         tools:layout="@layout/fragment_start_location">
         <action
-            android:id="@+id/startLocFrag_to_ActiveGPS"
+            android:id="@+id/addPerFrag_to_ActiveGPS"
             app:destination="@id/askToActiveGPSDialog" />
         <action
-            android:id="@+id/startLocFrag_to_levelFrag"
+            android:id="@+id/addPerFrag_to_levelFrag"
             app:destination="@id/levelFragment"
             app:enterAnim="@anim/enter_anim_slide"
             app:exitAnim="@anim/exit_anim_fade_out" />
@@ -66,11 +66,11 @@
             android:name="startLoc_initialAnim"
             app:argType="string" />
         <action
-            android:id="@+id/startLocFrag_to_mapFrag"
+            android:id="@+id/addPerFrag_to_mapFrag"
             app:destination="@id/mapFragment" />
         <action
-            android:id="@+id/action_startLocationFragment_to_hystoryFragment"
-            app:destination="@id/hystoryFragment" />
+            android:id="@+id/addPerFrag_to_historyFrag"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/levelFragment"
@@ -89,7 +89,7 @@
             app:enterAnim="@anim/enter_anim_slide"
             app:exitAnim="@anim/exit_anim_slide" />
         <action
-            android:id="@+id/levelFrag_to_startLocFrag"
+            android:id="@+id/levelFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/levelFragment"
             app:popUpToInclusive="true" />
@@ -119,7 +119,7 @@
             app:enterAnim="@anim/enter_anim_slide"
             app:exitAnim="@anim/exit_anim_slide" />
         <action
-            android:id="@+id/contextFrag_to_startLocationFrag"
+            android:id="@+id/contextFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/contextFragment"
             app:popUpToInclusive="true" />
@@ -147,7 +147,7 @@
             app:enterAnim="@anim/enter_anim_fade_in"
             app:exitAnim="@anim/exit_anim_fade_out" />
         <action
-            android:id="@+id/typeFrag_to_startLocFrag"
+            android:id="@+id/typeFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/typeFragment"
             app:popUpToInclusive="true" />
@@ -189,7 +189,7 @@
             android:name="idPerception"
             app:argType="string" />
         <action
-            android:id="@+id/sentFrag_to_startLocFrag"
+            android:id="@+id/sentFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment"
             app:popUpTo="@id/sentFragment"
             app:popUpToInclusive="true" />
@@ -212,7 +212,7 @@
             android:name="mail"
             app:argType="string" />
         <action
-            android:id="@+id/singUpTwoFrag_to_startLocFrag"
+            android:id="@+id/singUpTwoFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment" />
     </fragment>
     <dialog
@@ -230,7 +230,7 @@
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <action
-            android:id="@+id/userFrag_to_startLocFrag"
+            android:id="@+id/userFrag_to_addPerFrag"
             app:destination="@id/addPerceptionFragment"
             app:popUpToInclusive="true" />
         <action
@@ -241,23 +241,26 @@
             android:id="@+id/userFrag_to_mapFrag"
             app:destination="@id/mapFragment" />
         <action
-            android:id="@+id/action_userFragment_to_hystoryFragment"
-            app:destination="@id/hystoryFragment" />
+            android:id="@+id/userFrag_to_historyFrag"
+            app:destination="@id/historyFragment" />
         <action
             android:id="@+id/userFrag_to_editUserFrag"
             app:destination="@id/editUserFragment" />
     </fragment>
     <fragment
-        android:id="@+id/hystoryFragment"
+        android:id="@+id/historyFragment"
         android:name="com.example.perceptordeinseguridad.UI.HistoryFragment"
-        android:label="fragment_hystory"
-        tools:layout="@layout/fragment_history" >
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history">
         <action
-            android:id="@+id/hystoryFrag_to_mapFrag"
+            android:id="@+id/historyFrag_to_mapFrag"
             app:destination="@id/mapFragment" />
         <action
-            android:id="@+id/action_hystoryFragment_to_userFragment"
+            android:id="@+id/historyFrag_to_userFrag"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/historyFrag_to_addPerFrag"
+            app:destination="@id/addPerceptionFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
@@ -270,6 +273,9 @@
         <action
             android:id="@+id/mapFrag_to_userFrag"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/mapFrag_to_historyFrag"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/editUserFragment"

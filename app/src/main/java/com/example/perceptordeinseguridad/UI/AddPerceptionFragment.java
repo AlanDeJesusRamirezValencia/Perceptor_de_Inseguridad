@@ -23,6 +23,7 @@ import com.example.perceptordeinseguridad.R;
 public class AddPerceptionFragment extends LocationFragment implements MenuAnimations {
 
     private ImageButton goToUser;
+    private ImageButton goToHistory;
     private ImageButton goToMap;
     private View view;
 
@@ -30,13 +31,14 @@ public class AddPerceptionFragment extends LocationFragment implements MenuAnima
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedState) {
         initLocationComponents();
         View v = inflater.inflate(R.layout.fragment_start_location, container, false);
-        goToUser = v.findViewById(R.id.btn_goToUserFromStartLoc);
-        goToMap = v.findViewById(R.id.btn_goToMapFromStartLoc);
+        goToUser = v.findViewById(R.id.btn_goToUserFromAddPer);
+        goToHistory = v.findViewById(R.id.btn_goToHistoryFromAddPer);
+        goToMap = v.findViewById(R.id.btn_goToMapFromAddPer);
         //Animations
         floatButtonAnimations(
                 v.findViewById(R.id.start_loc_focus),
                 v.findViewById(R.id.start_loc_float_view),
-                v.findViewById(R.id.start_loc_float_image),
+                v.findViewById(R.id.add_per_float_image),
                 requireContext());
         this.view = v;
         return v;
@@ -48,8 +50,10 @@ public class AddPerceptionFragment extends LocationFragment implements MenuAnima
         ImageButton start = view.findViewById(R.id.btn_StartLocation);
         goToUser.setOnClickListener(
                 v -> Navigation.findNavController(view).navigate(R.id.startLocFrag_to_userFrag));
+        goToHistory.setOnClickListener(
+                v -> Navigation.findNavController(view).navigate(R.id.addPerFrag_to_historyFrag));
         goToMap.setOnClickListener(view1 ->
-                Navigation.findNavController(view).navigate(R.id.startLocFrag_to_mapFrag));
+                Navigation.findNavController(view).navigate(R.id.addPerFrag_to_mapFrag));
         start.setOnClickListener(v -> checkPermissionsAndGetLastLocation());
     }
 
@@ -58,11 +62,11 @@ public class AddPerceptionFragment extends LocationFragment implements MenuAnima
         Bundle args = new Bundle();
         args.putString("lat", lat + "");
         args.putString("lon", lon + "");
-        Navigation.findNavController(view).navigate(R.id.startLocFrag_to_levelFrag, args);
+        Navigation.findNavController(view).navigate(R.id.addPerFrag_to_levelFrag, args);
     }
 
     @Override
     protected void onGPSDisabled() {
-        Navigation.findNavController(view).navigate(R.id.startLocFrag_to_ActiveGPS);
+        Navigation.findNavController(view).navigate(R.id.addPerFrag_to_ActiveGPS);
     }
 }

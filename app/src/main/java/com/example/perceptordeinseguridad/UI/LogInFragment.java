@@ -137,7 +137,7 @@ public class LogInFragment extends Fragment {
             }
             else{
                 storeUserData();
-                Navigation.findNavController(view).navigate(R.id.logInFrag_to_startLocFrag);
+                Navigation.findNavController(view).navigate(R.id.logInFrag_to_addPerFrag);
             }
         } catch (JSONException e) {
             e.printStackTrace();

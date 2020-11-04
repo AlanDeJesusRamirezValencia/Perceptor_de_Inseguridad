@@ -58,6 +58,6 @@ public class SentFragment extends Fragment {
         report.setOnClickListener(v ->
                 Navigation.findNavController(v).navigate(R.id.sentFrag_to_reportDialog, args));
         close.setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.sentFrag_to_startLocFrag));
+                Navigation.findNavController(v).navigate(R.id.sentFrag_to_addPerFrag));
     }
 }
